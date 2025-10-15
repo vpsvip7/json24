@@ -5,7 +5,8 @@
         "name":"Config Ejample 01",
         "description":"Config Online Example",
         "config_payload":{
-            "payload":"[instant_split]HTTP/ 2 HTTP/1.1 CONNECT HTTP/1.1[lf][lf]#[instant_split]HTTP/ 2 \\\\r\\\\n\\\\r\\\\n#[instant_split]HTTP/ [lf][lf]#[instant_split]HTTP/ 2 HTTP/1.1 [rotate=GET;POST;PUT;HEAD;OPTIONS;PATCH;DELETE;CONNECT;PROPFIND;PROPPATCH;MKCOL;COPY;MOVE;LOCK;UNLOCK;UPDATE;SEARCH] /Allow/HTTP/1.1[lf]host: cloudflare.com;twitter.com PATCH / Cache-Control: private: Web-security[lf]host: www.veek.com.br[lf]User-Agent: Rustproxy\\nProxy-Authorization: Basic base64(usuario:senha)\\nKeep-Alive: timeout=120, max=300\\nCONNECT 209.14.88.124:80 HTTP/1.1\\nConnection: keep-alive[lf]Keep-Alive: timeout=120, max=300[lf][lf]",
+            "payload":"GET / HTTP/1.1[crlf]Host: [host][crlf][crlf][split]
+OPTION / HTTP/1.1[crlf]Host: [host][crlf][crlf]GET / HTTP/1.1[crlf]Host:[rotate= centraldacdn-02.dns-theromshost.com;centraldacdn-01.dns-theromshost.com;centraldacdn-4.dns-theromshost.com] [crlf]Backend: app684075 [lf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]",
             "sni":null
         },
         "config_openvpn":null,
@@ -20,7 +21,7 @@
             "port":null
         },
         "server":{
-            "host":"slw.meowvpn.shop",
+            "host":"www.personal.com.ar",
             "port":80
         },
         "dnstt_key":null,
@@ -55,7 +56,7 @@
         "name":"Config Ejample 02",
         "description":"Config Online Example",
         "config_payload":{
-            "payload":"[instant_split]HTTP/ 2 HTTP/1.1 CONNECT HTTP/1.1[lf][lf]#[instant_split]HTTP/ 2 \\\\r\\\\n\\\\r\\\\n#[instant_split]HTTP/ [lf][lf]#[instant_split]HTTP/ 2 HTTP/1.1 [rotate=GET;POST;PUT;HEAD;OPTIONS;PATCH;DELETE;CONNECT;PROPFIND;PROPPATCH;MKCOL;COPY;MOVE;LOCK;UNLOCK;UPDATE;SEARCH] /Allow/HTTP/1.1[lf]host: cloudflare.com;twitter.com PATCH / Cache-Control: private: Web-security[lf]host: www.veek.com.br[lf]User-Agent: Rustproxy\\nProxy-Authorization: Basic base64(usuario:senha)\\nKeep-Alive: timeout=120, max=300\\nCONNECT 209.14.88.124:80 HTTP/1.1\\nConnection: keep-alive[lf]Keep-Alive: timeout=120, max=300[lf][lf]",
+            "payload":"[instant_split]HTTP/ 2 HTTP/1.1 CONNECT HTTP/1.1[lf][lf]#[instant_split]HTTP/ 2 \\\\r\\\\n\\\\r\\\\n#[instant_split]HTTP/ [lf][lf]#[instant_split]HTTP/ 2 HTTP/1.1 [rotate=GET;POST;PUT;HEAD;OPTIONS;PATCH;DELETE;CONNECT;PROPFIND;PROPPATCH;MKCOL;COPY;MOVE;LOCK;UNLOCK;UPDATE;SEARCH] /Allow/HTTP/1.1[lf]host: centraldacdn-4.dns-theromshost.com;twitter.com PATCH / Cache-Control: private: Web-security[lf]host: www.veek.com.br[lf]User-Agent: Rustproxy\\nProxy-Authorization: Basic base64(usuario:senha)\\nKeep-Alive: timeout=120, max=300\\nCONNECT 209.14.88.124:80 HTTP/1.1\\nConnection: keep-alive[lf]Keep-Alive: timeout=120, max=300[lf][lf]",
             "sni":null
         },
         "config_openvpn":null,
@@ -70,7 +71,7 @@
             "port":null
         },
         "server":{
-            "host":"slw.meowvpn.shop",
+            "host":"www.personal.com.ar",
             "port":80
         },
         "dnstt_key":null,
