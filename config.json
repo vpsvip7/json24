@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.1",
+  "Version": "1.0.2",
   "ReleaseNotes": "@VEM_BRABO, CONEXÃO TIM SSL IP+BUGHOST ADICIONADA,CLARO RAPIDA FUNCIONAL",
   "UrlUpdate": "https://raw.githubusercontent.com/VENHABRABO/CONNECTA4G/main/UrlUpdate",
   "Sms": "https://raw.githubusercontent.com/VENHABRABO/CONNECTA4G/main/UrlSms",
@@ -10,7 +10,7 @@
   "UdpPort": "7100;7200;7300;7400;7500;7600;7700",
   "Servers": [
     {
-      "Name": "SERVIDOR BR",
+      "Name": "SERVIDOR 20323 BR",
       "TYPE": "premium",
       "FLAG": "br.png",
       "ServerIP": "och.atecubanos.tk",
