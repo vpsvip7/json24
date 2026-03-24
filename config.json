@@ -1,7 +1,7 @@
 {
   "Version": "1.4",
-  "ReleaseNotes": "Nueva Atualizacion Disponível",
-  "UrlUpdate": "https://pastebin.com/raw/1efD547UY",
+  "ReleaseNotes": "Nueva Atualizacion Disponible",
+  "UrlUpdate": "https://raw.githubusercontent.com/vpsvip7/json24/refs/heads/main/config.json",
   "Sms": "",
   "BackgroundLink": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Troncal_10.jpg",
   "LogoLink": "https://e7.pngegg.mbnail.png",
@@ -26,7 +26,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "TunnelType": "Proxy"
   },
  {
-   "Name": "Personal Chile🇨🇱 V6  Cloudflare",
+   "Name": "Personal Chile🇨🇱  Cloudflare",
    "FLAG": "br",
    "ServerIP": "emailmarketing.personal.com.ar",
    "ServerPort": "80",
@@ -62,7 +62,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "TunnelType": "Direct"
   },
 {
-   "Name": "CLARO AR🇦🇷 Front",
+   "Name": "CLARO 300mb x dia ",
    "FLAG": "br",
    "ServerIP": "www.claro.com.ar",
    "ServerPort": "80",
@@ -71,13 +71,13 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "ProxyPort": "",
    "ServerUser": "",
    "ServerPass": "",
-   "Payload": "GET / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf][split]
+   "Payload": "GET / HTTP/1.1[crlf]Host: www.claro.com.ar[crlf][crlf][split]
 OPTION / HTTP/1.1[crlf]Host: www.claro.com.ar[crlf][crlf]GET / HTTP/1.1[crlf]Host:[rotate= cpu2.nenenet.com.ar; cpu1.nenenet.com.ar; cpu3.nenenet.com.ar; soporte232.nenenet.com.ar][crlf]Backend: vip232 [crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]",
    "SNI": "",
    "Slowchave": "",
    "Nameserver": "",
    "Slowdns": "",
-   "URLCheckuser": "http://1wu.v202.shop:5001/checkUser",
+   "URLCheckuser": "http://23.175.41.232:2052/checkUser",
    "TunnelType": "Direct"
   }
  ]
