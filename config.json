@@ -22,7 +22,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "Slowchave": "",
    "Nameserver": "",
    "Slowdns": "",
-   "URLCheckuser": "http://1fd.v202.shop:5001/checkUser",
+   "URLCheckuser": "http://128.254.190.232:2052/checkUser",
    "TunnelType": "Proxy"
   },
  {
@@ -58,7 +58,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "Slowchave": "",
    "Nameserver": "",
    "Slowdns": "",
-   "URLCheckuser": "http://186.148.224.18:5001",
+   "URLCheckuser": "http://128.254.190.232:2052/checkUser",
    "TunnelType": "Direct"
   },
 {
