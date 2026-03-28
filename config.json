@@ -1,5 +1,5 @@
 {
-  "Version": "1.5",
+  "Version": "1.6",
   "ReleaseNotes": "NUEVA ACTUALIZACION🏁 Disponible",
   "UrlUpdate": "https://raw.githubusercontent.com/vpsvip7/json24/refs/heads/main/config.json",
   "Sms": "",
@@ -64,11 +64,11 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
 {
    "Name": "FRONT ip chile 🇨🇱 ",
    "FLAG": "chile",
-   "ServerIP": "emailmarketing.personal.com.ar",
+   "ServerIP": "recargas.personal.com.ar",
    "ServerPort": "80",
    "SSLPort": "",
-   "ProxyIP": "",
-   "ProxyPort": "",
+   "ProxyIP": "recargas.personal.com.ar",
+   "ProxyPort": "80",
    "ServerUser": "",
    "ServerPass": "",
    "Payload": "GET / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf][split]
