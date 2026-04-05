@@ -7,7 +7,7 @@
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 1,
-    "url_check_user": null,
+    "url_check_user": "http://190.106.134.122:5001/checkUser",
     "icon": null,
     "tls_version": "TLSv1.2",
     "config_payload": {
@@ -52,7 +52,7 @@
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 1,
-    "url_check_user": "http://190.106.134.122:2052",
+    "url_check_user": "http://190.106.134.122:5001/checkUser",
     "icon": null,
     "tls_version": "TLSv1.2",
     "config_payload": {
