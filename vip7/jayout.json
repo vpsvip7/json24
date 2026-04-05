@@ -213,7 +213,7 @@
     "id": 7985,
     "label": "Usar limiter de conecion",
     "name": "APP_CONNECTION_LIMITER",
-    "value": true,
+    "value": false,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -222,7 +222,7 @@
     "id": 12836,
     "label": "Usar boton de actualizacion",
     "name": "APP_BTN_UPDATE_ENABLED",
-    "value": true,
+    "value": false,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -258,7 +258,7 @@
     "id": 14426,
     "label": "Activar dialogo de checkuser",
     "name": "APP_CHECKUSER_DIALOG_ENABLED",
-    "value": true,
+    "value": false,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
