@@ -87,7 +87,7 @@
     "id": 7981,
     "label": "Raio do card de status",
     "name": "APP_CARD_STATUS_RADIUS",
-    "value": 26,
+    "value": 27,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -141,7 +141,7 @@
     "id": 7983,
     "label": "Raio dos inputs",
     "name": "APP_INPUT_RADIUS",
-    "value": 26,
+    "value": 27,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -150,7 +150,7 @@
     "id": 3816,
     "label": "Cor dos textos",
     "name": "APP_TEXT_COLOR",
-    "value": "#FF00FFFF",
+    "value": "#FFFFFFFF",
     "type": "COLOR",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
