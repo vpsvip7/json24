@@ -222,7 +222,7 @@
     "id": 12836,
     "label": "Usar boton de actualizacion",
     "name": "APP_BTN_UPDATE_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -240,7 +240,7 @@
     "id": 12838,
     "label": "Usar boton de pagina webview",
     "name": "APP_BTN_PAGE_ENABLED",
-    "value": true,
+    "value": false,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
