@@ -1,0 +1,400 @@
+[
+  {
+    "id": 26680,
+    "label": "Nome do app",
+    "name": "APP_NAME",
+    "value": "",
+    "type": "STRING",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 26681,
+    "label": "Logo do app",
+    "name": "APP_LOGO",
+    "value": "",
+    "type": "IMAGE",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 26682,
+    "label": "Imagem de fundo",
+    "name": "APP_BACKGROUND_IMAGE",
+    "value": "",
+    "type": "IMAGE",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3810,
+    "label": "Tipo do fundo do app",
+    "name": "APP_BACKGROUND_TYPE",
+    "value": {
+      "options": [
+        {
+          "label": "Imagem",
+          "value": "IMAGE"
+        },
+        {
+          "label": "Cor",
+          "value": "COLOR"
+        }
+      ],
+      "selected": "COLOR"
+    },
+    "type": "SELECT",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3811,
+    "label": "Cor de fundo",
+    "name": "APP_BACKGROUND_COLOR",
+    "value": "#080E16C7",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3812,
+    "label": "Cor do card inicial",
+    "name": "APP_CARD_COLOR",
+    "value": "#1D242E73",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 7979,
+    "label": "Raio do card inicial",
+    "name": "APP_CARD_RADIUS",
+    "value": 20,
+    "type": "INTEGER",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 7980,
+    "label": "Cor do card de status",
+    "name": "APP_CARD_STATUS_COLOR",
+    "value": "#1D242E73",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 7981,
+    "label": "Raio do card de status",
+    "name": "APP_CARD_STATUS_RADIUS",
+    "value": 25,
+    "type": "INTEGER",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3813,
+    "label": "Cor do card de configurações",
+    "name": "APP_CARD_CONFIG_COLOR",
+    "value": "#0E171EC9",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3814,
+    "label": "Cor do fundo dos dialogs",
+    "name": "APP_DIALOG_BACKGROUND_COLOR",
+    "value": "#050C5AE4",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 11850,
+    "label": "Cor do fundo do dialog de log",
+    "name": "APP_DIALOG_LOGGER_COLOR",
+    "value": "#080E16C7",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3815,
+    "label": "Cor das bordas",
+    "name": "APP_BORDER_COLOR",
+    "value": "#1D242E73",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 7982,
+    "label": "Cor dos inputs",
+    "name": "APP_INPUT_COLOR",
+    "value": "#1D242E73",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 7983,
+    "label": "Raio dos inputs",
+    "name": "APP_INPUT_RADIUS",
+    "value": 25,
+    "type": "INTEGER",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3816,
+    "label": "Cor dos textos",
+    "name": "APP_TEXT_COLOR",
+    "value": "#FFFFFFFF",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3817,
+    "label": "Cor dos botões",
+    "name": "APP_BUTTON_COLOR",
+    "value": "#1D242E73",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 7984,
+    "label": "Raio dos botões",
+    "name": "APP_BUTTON_RADIUS",
+    "value": 25,
+    "type": "INTEGER",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3818,
+    "label": "Cor dos icones",
+    "name": "APP_ICON_COLOR",
+    "value": "#FFFFFFFF",
+    "type": "COLOR",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3819,
+    "label": "VER modo de conecion",
+    "name": "APP_SHOW_CONNECTION_MODE",
+    "value": false,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 22784,
+    "label": "Actualizar automaticamente las configuraciones al lanzar una actualizacion.",
+    "name": "APP_CONFIG_AUTO_UPDATE",
+    "value": false,
+    "type": "BOOLEAN",
+    "status": "INACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 4922,
+    "label": "Iniciar la app automaticamente al reiniciar el dispositivo",
+    "name": "APP_AUTO_START",
+    "value": false,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 7985,
+    "label": "Usar limiter de conecion",
+    "name": "APP_CONNECTION_LIMITER",
+    "value": true,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 12836,
+    "label": "Usar boton de actualizacion",
+    "name": "APP_BTN_UPDATE_ENABLED",
+    "value": true,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 12837,
+    "label": "Usar boton de registros",
+    "name": "APP_BTN_LOGGER_ENABLED",
+    "value": false,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 12838,
+    "label": "Usar boton de pagina webview",
+    "name": "APP_BTN_PAGE_ENABLED",
+    "value": true,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 14425,
+    "label": "Activar dialog de error",
+    "name": "APP_DIALOG_ERROR_ENABLED",
+    "value": false,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 14426,
+    "label": "Activar dialogo de checkuser",
+    "name": "APP_CHECKUSER_DIALOG_ENABLED",
+    "value": true,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 14427,
+    "label": "Activar info de conectado",
+    "name": "APP_SUCCESS_TOAST_ENABLED",
+    "value": false,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 14428,
+    "label": "Activar info de error",
+    "name": "APP_ERROR_TOAST_ENABLED",
+    "value": false,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 14429,
+    "label": "Usar layout webview",
+    "name": "APP_LAYOUT_WEBVIEW_ENABLED",
+    "value": false,
+    "type": "BOOLEAN",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3820,
+    "label": "Mensagem",
+    "name": "APP_MESSAGE",
+    "value": "",
+    "type": "TEXT",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3822,
+    "label": "URL de actualizacion de aplicativo",
+    "name": "APP_UPDATE_URL",
+    "value": null,
+    "type": "URL",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3821,
+    "label": "Tipo de mensagem",
+    "name": "APP_MESSAGE_TYPE",
+    "value": {
+      "options": [
+        {
+          "label": "Alerta",
+          "value": "ALERT"
+        },
+        {
+          "label": "Informação",
+          "value": "INFO"
+        },
+        {
+          "label": "Wep todo bien",
+          "value": "WELCOME"
+        },
+        {
+          "label": "Sim mensagem",
+          "value": "NONE"
+        }
+      ],
+      "selected": "NONE"
+    },
+    "type": "SELECT",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 14430,
+    "label": "LAYOUT WEBVIEW (POR SU CUENTA y RIESGO)",
+    "name": "APP_LAYOUT_WEBVIEW",
+    "value": "",
+    "type": "HTML",
+    "status": "ACTIVE",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3823,
+    "label": "ANDROID WEBVIEW (POR SU CUENTA y RIeSCO)",
+    "name": "APP_SUPPORT_BUTTON",
+    "value": "",
+    "type": "HTML",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "id": 3824,
+    "label": "PAGINA WEBVIEW (POR SUA CONTA E RISCO)",
+    "name": "APP_WEB_VIEW",
+    "type": "HTML",
+    "value": "",
+    "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
+  },
+  {
+    "name": "APP_UPDATE_LAST_SEEN_ENABLED",
+    "value": false,
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "APP_AIRPLANE_MODE",
+    "value": false,
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "APP_LOCAL_IP_ENABLED",
+    "value": false,
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "APP_PING_SERVICE_ENABLED",
+    "value": false,
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "APP_CONFIG_FILTER_ENABLED",
+    "value": false,
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "APP_CDN_COUNT_ENABLED",
+    "value": false,
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "APP_CONFIG_LOCATION_PERMISSION",
+    "value": false,
+    "type": "BOOLEAN"
+  }
+]
