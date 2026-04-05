@@ -69,7 +69,7 @@
     "id": 7979,
     "label": "Raio do card inicial",
     "name": "APP_CARD_RADIUS",
-    "value": 20,
+    "value": 22,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -87,7 +87,7 @@
     "id": 7981,
     "label": "Raio do card de status",
     "name": "APP_CARD_STATUS_RADIUS",
-    "value": 25,
+    "value": 26,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -141,7 +141,7 @@
     "id": 7983,
     "label": "Raio dos inputs",
     "name": "APP_INPUT_RADIUS",
-    "value": 25,
+    "value": 26,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -150,7 +150,7 @@
     "id": 3816,
     "label": "Cor dos textos",
     "name": "APP_TEXT_COLOR",
-    "value": "#FFFFFFFF",
+    "value": "#FF00FFFF",
     "type": "COLOR",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -168,7 +168,7 @@
     "id": 7984,
     "label": "Raio dos botões",
     "name": "APP_BUTTON_RADIUS",
-    "value": 25,
+    "value": 27,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -177,7 +177,7 @@
     "id": 3818,
     "label": "Cor dos icones",
     "name": "APP_ICON_COLOR",
-    "value": "#FFFFFFFF",
+    "value": "#FFFFFF00",
     "type": "COLOR",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -195,7 +195,7 @@
     "id": 22784,
     "label": "Actualizar automaticamente las configuraciones al lanzar una actualizacion.",
     "name": "APP_CONFIG_AUTO_UPDATE",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "INACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -231,7 +231,7 @@
     "id": 12837,
     "label": "Usar boton de registros",
     "name": "APP_BTN_LOGGER_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -267,7 +267,7 @@
     "id": 14427,
     "label": "Activar info de conectado",
     "name": "APP_SUCCESS_TOAST_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -294,7 +294,7 @@
     "id": 3820,
     "label": "Mensagem",
     "name": "APP_MESSAGE",
-    "value": "",
+    "value": "WEP🇦🇷😎",
     "type": "TEXT",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -310,7 +310,7 @@
   },
   {
     "id": 3821,
-    "label": "Tipo de mensagem",
+    "label": "Tipo de mensage",
     "name": "APP_MESSAGE_TYPE",
     "value": {
       "options": [
@@ -319,7 +319,7 @@
           "value": "ALERT"
         },
         {
-          "label": "Informação",
+          "label": "Informacion",
           "value": "INFO"
         },
         {
@@ -328,7 +328,7 @@
         },
         {
           "label": "Sim mensagem",
-          "value": "NONE"
+          "value": "ACTIVE"
         }
       ],
       "selected": "NONE"
@@ -364,7 +364,7 @@
   },
   {
     "name": "APP_UPDATE_LAST_SEEN_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN"
   },
   {
