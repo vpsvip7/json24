@@ -97,7 +97,7 @@
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 2,
-    "url_check_user": null,
+    "url_check_user": "http://38.7.207.237:5001/checkUser",
     "icon": null,
     "tls_version": "TLSv1.2",
     "config_payload": {
@@ -142,7 +142,7 @@
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 2,
-    "url_check_user": "http://38.7.207.237:2052",
+    "url_check_user": "http://38.7.207.237:5001/checkUser",
     "icon": null,
     "tls_version": "TLSv1.2",
     "config_payload": {
