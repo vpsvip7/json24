@@ -2,12 +2,12 @@
   {
     "id": 977733,
     "category_id": 165398,
-    "name": "🇦🇷FRONT github ip AR",
+    "name": "🇦🇷FRONT github2 ip AR",
     "description": "sin saldo ni mb",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 1,
-    "url_check_user": "http://190.106.134.122:2052",
+    "url_check_user": null,
     "icon": null,
     "tls_version": "TLSv1.2",
     "config_payload": {
