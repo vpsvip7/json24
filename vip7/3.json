@@ -69,7 +69,7 @@
     "id": 7979,
     "label": "Raio do card inicial",
     "name": "APP_CARD_RADIUS",
-    "value": 22,
+    "value": 24,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -87,7 +87,7 @@
     "id": 7981,
     "label": "Raio do card de status",
     "name": "APP_CARD_STATUS_RADIUS",
-    "value": 27,
+    "value": 29,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -141,7 +141,7 @@
     "id": 7983,
     "label": "Raio dos inputs",
     "name": "APP_INPUT_RADIUS",
-    "value": 27,
+    "value": 29,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -168,7 +168,7 @@
     "id": 7984,
     "label": "Raio dos botões",
     "name": "APP_BUTTON_RADIUS",
-    "value": 27,
+    "value": 29,
     "type": "INTEGER",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -276,7 +276,7 @@
     "id": 14428,
     "label": "Activar info de error",
     "name": "APP_ERROR_TOAST_ENABLED",
-    "value": teue,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -379,7 +379,7 @@
   },
   {
     "name": "APP_PING_SERVICE_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN"
   },
   {
