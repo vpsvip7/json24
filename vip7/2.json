@@ -2,7 +2,7 @@
   {
     "id": 977733,
     "category_id": 165398,
-    "name": "🇦🇷FRONT git23 ip AR",
+    "name": "🇦🇷FRONT git24 ip AR",
     "description": "sin saldo ni mb",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -146,7 +146,7 @@
     "icon": "https://i.ibb.co/Wv8r6Mhx/chile.png",
     "tls_version": "TLSv1.2",
     "config_payload": {
-      "payload": "GET //  HTTP/1.1[lf]Host: recargas.personal.com.ar[lf]Expect: 911-continue[crlf][crlf][split][crlf][crlf]GET- // HTTP/1.1[crlf]Host: c1.vps204.shop[crlf]Connection: Upgrade[crlf]-_-[crlf]Upgrade: websocket[crlf][crlf]",
+      "payload": "GET //  HTTP/1.1[lf]Host: recargas.personal.com.ar[lf]Expect: 911-continue[crlf][crlf][split][crlf][crlf]GET- // HTTP/1.1[crlf]Host: demo.vps204.shop[crlf]Connection: Upgrade[crlf]-_-[crlf]Upgrade: websocket[crlf][crlf]",
       "sni": null
     },
     "config_openvpn": null,
