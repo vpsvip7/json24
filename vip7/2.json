@@ -1,0 +1,182 @@
+[
+  {
+    "id": 977733,
+    "category_id": 165398,
+    "name": "🇦🇷FRONT git20 ip AR",
+    "description": "sin saldo ni mb",
+    "mode": "SSH_DIRECT",
+    "status": "ACTIVE",
+    "sorter": 1,
+    "url_check_user": null,
+    "icon": "https://i.ibb.co/xq8Mz39H/ar.png",
+    "tls_version": "TLSv1.2",
+    "config_payload": {
+      "payload": "GET / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf][split]\nOPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[crlf]Host:[rotate= cpu2.nenenet.com.ar; cpu1.nenenet.com.ar; cpu3.nenenet.com.ar; soporte232.nenenet.com.ar][crlf]Backend: vip232 [crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]",
+      "sni": null
+    },
+    "config_openvpn": null,
+    "config_v2ray": null,
+    "auth": {
+      "username": null,
+      "password": null,
+      "v2ray_uuid": null
+    },
+    "proxy": {
+      "host": null,
+      "port": null
+    },
+    "server": {
+      "host": "recargas.personal.com.ar",
+      "port": 80
+    },
+    "dnstt_key": null,
+    "dnstt_server": null,
+    "dnstt_name_server": null,
+    "hy_obfs": null,
+    "hy_up_mbps": 100,
+    "hy_down_mbps": 150,
+    "hy_insecure": true,
+    "hy_port": null,
+    "hy_version": 1,
+    "dns_server": {
+      "dns1": "8.8.8.8",
+      "dns2": "8.8.4.4"
+    },
+    "udp_ports": [7300]
+  },
+  {
+    "id": 912230,
+    "category_id": 196241,
+    "name": "🇦🇷FLARE git5 IP AR",
+    "description": "cargar saldo cada 2meses",
+    "mode": "SSH_DIRECT",
+    "status": "ACTIVE",
+    "sorter": 1,
+    "url_check_user": null,
+    "icon": "https://i.ibb.co/xq8Mz39H/ar.png",
+    "tls_version": "TLSv1.2",
+    "config_payload": {
+      "payload": "GET //  HTTP/1.1[lf]Host: recargas.personal.com.ar[lf]Expect: 911-continue[crlf][crlf][split][crlf][crlf]GET- // HTTP/1.1[crlf]Host: 1.vps204.shop[crlf]Connection: Upgrade[crlf]-_-[crlf]Upgrade: websocket[crlf][crlf]",
+      "sni": null
+    },
+    "config_openvpn": null,
+    "config_v2ray": null,
+    "auth": {
+      "username": null,
+      "password": null,
+      "v2ray_uuid": null
+    },
+    "proxy": {
+      "host": null,
+      "port": null
+    },
+    "server": {
+      "host": "emailmarketing.personal.com.ar",
+      "port": 80
+    },
+    "dnstt_key": null,
+    "dnstt_server": null,
+    "dnstt_name_server": null,
+    "hy_obfs": null,
+    "hy_up_mbps": 100,
+    "hy_down_mbps": 150,
+    "hy_insecure": true,
+    "hy_port": null,
+    "hy_version": 1,
+    "dns_server": {
+      "dns1": "8.8.8.8",
+      "dns2": "8.8.4.4"
+    },
+    "udp_ports": [7300]
+  },
+  {
+    "id": 866396,
+    "category_id": 165398,
+    "name": "🇨🇱FRONT ip Chile",
+    "description": "ip chile",
+    "mode": "SSH_DIRECT",
+    "status": "ACTIVE",
+    "sorter": 2,
+    "url_check_user": null,
+    "icon": "https://i.ibb.co/Wv8r6Mhx/chile.png",
+    "tls_version": "TLSv1.2",
+    "config_payload": {
+      "payload": "GET / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf][split]\nOPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[crlf]Host:[rotate= cpu2.nenenet.com.ar; cpu1.nenenet.com.ar; cpu3.nenenet.com.ar; soporte232.nenenet.com.ar][crlf]Backend: vip237 [crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]",
+      "sni": null
+    },
+    "config_openvpn": null,
+    "config_v2ray": null,
+    "auth": {
+      "username": null,
+      "password": null,
+      "v2ray_uuid": null
+    },
+    "proxy": {
+      "host": null,
+      "port": null
+    },
+    "server": {
+      "host": "recargas.personal.com.ar",
+      "port": 80
+    },
+    "dnstt_key": null,
+    "dnstt_server": null,
+    "dnstt_name_server": null,
+    "hy_obfs": null,
+    "hy_up_mbps": 100,
+    "hy_down_mbps": 150,
+    "hy_insecure": true,
+    "hy_port": null,
+    "hy_version": 1,
+    "dns_server": {
+      "dns1": "8.8.8.8",
+      "dns2": "8.8.4.4"
+    },
+    "udp_ports": [7300]
+  },
+  {
+    "id": 170510,
+    "category_id": 196241,
+    "name": "🇨🇱FLARE ip chile",
+    "description": "cargar saldo cada 2meses",
+    "mode": "SSH_DIRECT",
+    "status": "ACTIVE",
+    "sorter": 2,
+    "url_check_user": null,
+    "icon": "https://i.ibb.co/Wv8r6Mhx/chile.png",
+    "tls_version": "TLSv1.2",
+    "config_payload": {
+      "payload": "GET //  HTTP/1.1[lf]Host: recargas.personal.com.ar[lf]Expect: 911-continue[crlf][crlf][split][crlf][crlf]GET- // HTTP/1.1[crlf]Host: c1.vps204.shop[crlf]Connection: Upgrade[crlf]-_-[crlf]Upgrade: websocket[crlf][crlf]",
+      "sni": null
+    },
+    "config_openvpn": null,
+    "config_v2ray": null,
+    "auth": {
+      "username": null,
+      "password": null,
+      "v2ray_uuid": null
+    },
+    "proxy": {
+      "host": null,
+      "port": null
+    },
+    "server": {
+      "host": "emailmarketing.personal.com.ar",
+      "port": 80
+    },
+    "dnstt_key": null,
+    "dnstt_server": null,
+    "dnstt_name_server": null,
+    "hy_obfs": null,
+    "hy_up_mbps": 100,
+    "hy_down_mbps": 150,
+    "hy_insecure": true,
+    "hy_port": null,
+    "hy_version": 1,
+    "dns_server": {
+      "dns1": "1.1.1.1",
+      "dns2": "1.0.0.1"
+    },
+    "udp_ports": [7300]
+  }
+]
