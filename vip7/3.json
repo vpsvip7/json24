@@ -285,7 +285,7 @@
     "id": 14429,
     "label": "Usar layout webview",
     "name": "APP_LAYOUT_WEBVIEW_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -341,7 +341,7 @@
     "id": 14430,
     "label": "LAYOUT WEBVIEW (POR SU CUENTA y RIESGO)",
     "name": "APP_LAYOUT_WEBVIEW",
-    "value": "",
+    "value": "https://raw.githubusercontent.com/vpsvip7/json24/refs/heads/main/vip7/app1.html",
     "type": "HTML",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
