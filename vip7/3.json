@@ -240,7 +240,7 @@
     "id": 12838,
     "label": "Usar boton de pagina webview",
     "name": "APP_BTN_PAGE_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -359,7 +359,7 @@
     "label": "PAGINA WEBVIEW (POR SUA CONTA E RISCO)",
     "name": "APP_WEB_VIEW",
     "type": "HTML",
-    "value": "",
+    "value": "fast.com",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
   },
   {
