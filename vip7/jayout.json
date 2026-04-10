@@ -213,7 +213,7 @@
     "id": 7985,
     "label": "Usar limiter de conecion",
     "name": "APP_CONNECTION_LIMITER",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -240,7 +240,7 @@
     "id": 12838,
     "label": "Usar boton de pagina webview",
     "name": "APP_BTN_PAGE_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -249,7 +249,7 @@
     "id": 14425,
     "label": "Activar dialog de error",
     "name": "APP_DIALOG_ERROR_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -276,7 +276,7 @@
     "id": 14428,
     "label": "Activar info de error",
     "name": "APP_ERROR_TOAST_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -341,7 +341,7 @@
     "id": 14430,
     "label": "LAYOUT WEBVIEW (POR SU CUENTA y RIESGO)",
     "name": "APP_LAYOUT_WEBVIEW",
-    "value": "",
+    "value": "hola2",
     "type": "HTML",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -350,7 +350,7 @@
     "id": 3823,
     "label": "ANDROID WEBVIEW (POR SU CUENTA y RIeSCO)",
     "name": "APP_SUPPORT_BUTTON",
-    "value": "",
+    "value": "hola",
     "type": "HTML",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
   },
@@ -379,17 +379,17 @@
   },
   {
     "name": "APP_PING_SERVICE_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN"
   },
   {
     "name": "APP_CONFIG_FILTER_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN"
   },
   {
     "name": "APP_CDN_COUNT_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN"
   },
   {
