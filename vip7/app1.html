@@ -1,0 +1,2413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>VRConnect</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/light/style.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+      }
+
+      body {
+        background: #181818;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .logo-container {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .logo {
+        width: 100%;
+        max-width: 588px;
+        height: auto;
+        max-height: 223px;
+        object-fit: contain;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        background: linear-gradient(90deg, #9f6ff2, #ff4500);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .subtitle {
+        text-align: center;
+        font-size: 1rem;
+        color: #ccc;
+      }
+
+      .select-server {
+        padding: 1.2rem !important;
+        border-radius: 15px !important;
+        font-size: 1.1rem !important;
+      }
+
+      .select-server,
+      .input-field {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 0.75rem;
+        border-radius: 8px;
+        gap: 0.75rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        border: 1px solid #333;
+        position: relative;
+      }
+
+      .select-server:hover {
+        background: rgba(255, 165, 0, 0.15);
+      }
+
+      .input-field.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      .input-field.disabled input {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+
+      .input-field.hidden {
+        display: none !important;
+      }
+
+      .select-server i,
+      .input-field i {
+        color: #9f6ff2;
+      }
+
+      .select-server > i:last-child,
+      .input-field > i:last-child {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+      .select-server input,
+      .input-field input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        padding-right: 2.5rem;
+      }
+
+      .input-field input {
+        cursor: text;
+      }
+
+      .select-server input::placeholder,
+      .input-field input::placeholder {
+        color: #999;
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 1.2rem;
+        color: #ff6347;
+        transition: color 0.3s ease;
+      }
+
+      .status i {
+        font-size: 0.8em;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .action-btn {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border: 1px solid #333;
+      }
+
+      .action-btn:hover {
+        background: rgba(255, 140, 0, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .main-connect-actions {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+      }
+
+      .connect-btn {
+        flex: 2;
+        background-color: #ff4500;
+        color: #fff;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        box-shadow: 0 4px 6px rgba(255, 69, 0, 0.2);
+      }
+
+      .auto-connect-btn {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border: 1px solid #9f6ff2;
+        padding: 0.8rem;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.6s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .auto-connect-btn.auto-process {
+        background: rgba(242, 111, 199, 0.5);
+        animation: pulse-border 1.5s infinite;
+      }
+
+      @keyframes pulse-border {
+        0% {
+          box-shadow: 0 0 0 0 rgba(242, 111, 199, 0.5);
+        }
+        70% {
+          box-shadow: 0 0 0 6px rgba(255, 140, 0, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
+        }
+      }
+
+      .connect-btn:hover,
+      .auto-connect-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(255, 69, 0, 0.3);
+      }
+
+      .connect-btn.connecting {
+        background-color: #9f6ff2;
+      }
+
+      .connect-btn.connected {
+        background-color: #4caf50;
+      }
+
+      .connect-btn:disabled,
+      .auto-connect-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      .error-message {
+        background: rgba(244, 67, 54, 0.1);
+        border: 1px solid rgba(244, 67, 54, 0.3);
+        color: #f44336;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        text-align: center;
+        display: none;
+        margin-top: -0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+      }
+      .modal {
+        background: #2a2a2a;
+        border-radius: 16px;
+        max-width: 500px;
+        width: 90%;
+        max-height: 80vh;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid #333;
+      }
+      .modal-header {
+        padding: 1.5rem;
+        border-bottom: 1px solid #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .modal-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #9f6ff2;
+      }
+      .close-btn {
+        background: none;
+        border: none;
+        color: #9f6ff2;
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .close-btn:hover {
+        background: rgba(255, 140, 0, 0.1);
+      }
+      .modal-body {
+        padding: 1rem 0;
+        max-height: 60vh;
+        overflow-y: auto;
+      }
+      .category {
+        margin-bottom: 1.5rem;
+      }
+      .category-header {
+        padding: 0.75rem 1.5rem;
+        font-weight: bold;
+        font-size: 0.9rem;
+        color: #9f6ff2;
+        border-bottom: 1px solid #333;
+      }
+      .server-item {
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        border-bottom: 1px solid #333;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .server-item:hover {
+        background: rgba(255, 140, 0, 0.1);
+      }
+
+      .server-item.selected {
+        background: rgba(255, 140, 0, 0.2);
+        border-left: 3px solid #9f6ff2;
+      }
+      .server-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 4px;
+        flex-shrink: 0;
+      }
+      .server-info {
+        flex: 1;
+      }
+      .server-name {
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 0.25rem;
+      }
+      .server-details {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.8rem;
+        color: #ccc;
+      }
+      .server-mode {
+        background: rgba(255, 165, 0, 0.2);
+        color: #9f6ff2;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.7rem;
+      }
+      .hidden {
+        display: none !important;
+      }
+      .modal-body::-webkit-scrollbar {
+        width: 6px;
+      }
+      .modal-body::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .modal-body::-webkit-scrollbar-thumb {
+        background: rgba(255, 165, 0, 0.5);
+        border-radius: 3px;
+      }
+      .network-info {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        border: 1px solid #333;
+      }
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #b0bec5;
+        font-size: 11px;
+        word-break: break-all;
+      }
+      .info-value {
+        color: #9f6ff2;
+        font-weight: 500;
+      }
+      .icon {
+        width: 14px;
+        text-align: center;
+        color: #9f6ff2;
+      }
+      .glow-icon {
+        filter: drop-shadow(0 0 8px rgba(255, 165, 0, 0.6));
+      }
+      .user-info {
+        background: rgba(40, 40, 40, 0.9);
+        border-radius: 16px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        display: none;
+        backdrop-filter: blur(10px);
+        border: 1px solid #333;
+      }
+      .user-info-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #333;
+      }
+      .user-avatar {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #9f6ff2, #ff4500);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      .user-welcome {
+        flex: 1;
+      }
+      .user-welcome h3 {
+        margin: 0;
+        color: #9f6ff2;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .user-welcome p {
+        margin: 0;
+        color: #ccc;
+        font-size: 0.8rem;
+      }
+      .user-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+      }
+      .stat-item {
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+        padding: 0.75rem;
+        text-align: center;
+        border: 1px solid #333;
+      }
+      .stat-label {
+        color: #ccc;
+        font-size: 0.7rem;
+        margin-bottom: 0.25rem;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .stat-value {
+        color: #9f6ff2;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      .connecting-animation {
+        display: none;
+        text-align: center;
+        padding: 1.5rem;
+        color: #fff;
+      }
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        border-top: 3px solid #9f6ff2;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1rem;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .connecting-text {
+        color: #ccc;
+        font-size: 0.9rem;
+      }
+      .input-field {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      .input-field.fade-out {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      .user-info.fade-in {
+        animation: fadeInUp 0.5s ease forwards;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+      }
+      .menu-container {
+        background: rgba(30, 30, 30, 0.95);
+        border-radius: 20px;
+        width: 90%;
+        max-width: 400px;
+        padding: 1.5rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+        transform: scale(0.9);
+        opacity: 0;
+        transition: all 0.3s ease;
+        border: 1px solid #333;
+        overflow: hidden;
+      }
+
+      .menu-header {
+        background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #444;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+      }
+
+      .menu-header-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffffff;
+        background: linear-gradient(45deg, #9f6ff2, #9f6ff2);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .menu-close-btn {
+        background: none;
+        border: none;
+        color: #999;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+      }
+
+      .menu-close-btn:hover {
+        background: rgba(255, 140, 0, 0.1);
+        color: #9f6ff2;
+        transform: rotate(90deg);
+      }
+
+      .menu-overlay.show .menu-container {
+        transform: scale(1);
+        opacity: 1;
+      }
+      .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 1.2rem;
+        margin-bottom: 0.8rem;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        border: 1px solid #333;
+      }
+
+      .menu-item:hover {
+        background: rgba(255, 140, 0, 0.25);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 140, 0, 0.25);
+      }
+
+      .menu-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .menu-item i {
+        font-size: 1.2rem;
+        color: #9f6ff2;
+        margin-right: 1rem;
+        width: 20px;
+      }
+
+      /* Estilo especial para o botão de comprar acesso */
+      .menu-item.purchase-highlight i {
+        color: #f26fc7;
+      }
+
+      .menu-item.purchase-highlight .menu-title {
+        background: linear-gradient(45deg, #9f6ff2, #f26fc7);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      }
+
+      .menu-item.purchase-highlight {
+        border: 1px solid rgba(242, 111, 199, 0.3);
+        box-shadow: 0 4px 12px rgba(242, 111, 199, 0.2);
+      }
+
+      .menu-item.purchase-highlight:hover {
+        border-color: rgba(242, 111, 199, 0.5);
+        box-shadow: 0 8px 20px rgba(242, 111, 199, 0.3);
+      }
+
+      .menu-content {
+        flex: 1;
+      }
+      .menu-title {
+        font-weight: bold;
+        color: #9f6ff2;
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+      }
+      .menu-desc {
+        color: #ccc;
+        font-size: 0.75rem;
+      }
+      .status-indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #f44336;
+        transition: background 0.3s ease;
+      }
+      .status-indicator.active {
+        background: #4caf50;
+      }
+      .category-item {
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        border-bottom: 1px solid #333;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .category-item:hover {
+        background: rgba(255, 140, 0, 0.1);
+      }
+      .category-item-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .category-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 4px;
+        flex-shrink: 0;
+      }
+      .category-info {
+        flex: 1;
+      }
+      .category-name {
+        font-weight: bold;
+        color: #9f6ff2;
+        margin-bottom: 0.25rem;
+      }
+      .category-count {
+        font-size: 0.8rem;
+        color: #ccc;
+      }
+      .back-btn {
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        border-bottom: 1px solid #333;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #9f6ff2;
+        font-weight: bold;
+      }
+      .back-btn:hover {
+        background: rgba(255, 140, 0, 0.1);
+      }
+      @media (max-width: 480px) {
+        .container {
+          padding: 1.5rem 1rem;
+        }
+        .title {
+          font-size: 1.6rem;
+        }
+        .subtitle {
+          font-size: 0.9rem;
+        }
+        .modal {
+          width: 95%;
+          max-height: 85vh;
+        }
+        .server-details {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .action-buttons {
+          gap: 0.5rem;
+        }
+        .action-btn {
+          padding: 0.6rem;
+          font-size: 0.8rem;
+        }
+        .network-info {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .menu-container {
+          padding: 1rem;
+        }
+        .menu-item {
+          padding: 0.9rem;
+          margin-bottom: 0.6rem;
+        }
+        .menu-title {
+          font-size: 0.85rem;
+        }
+        .menu-desc {
+          font-size: 0.7rem;
+        }
+        .menu-item i {
+          font-size: 1.1rem;
+          margin-right: 0.8rem;
+        }
+      }      /* Estilos para a tela de compra */
+      .purchase-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1a1a1a, #2d2d2d, #1a1a1a);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        z-index: 2000;
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        padding-top: env(safe-area-inset-top, 0);
+        padding-bottom: env(safe-area-inset-bottom, 0);
+        padding-left: env(safe-area-inset-left, 0);
+        padding-right: env(safe-area-inset-right, 0);
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }      .purchase-toolbar {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+        border-bottom: 1px solid #444;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        padding-left: max(1.5rem, env(safe-area-inset-left, 0));
+        padding-right: max(1.5rem, env(safe-area-inset-right, 0));
+      }
+
+      .toolbar-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .toolbar-btn:hover {
+        background: rgba(255, 140, 0, 0.1);
+        transform: scale(1.1);
+      }
+
+      .toolbar-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-left: 1rem;
+      }
+
+      .toolbar-spacer {
+        flex: 1;
+      }      .purchase-header {
+        text-align: center;
+        padding: 2rem 1.5rem 1rem;
+        padding-left: max(1.5rem, env(safe-area-inset-left, 0));
+        padding-right: max(1.5rem, env(safe-area-inset-right, 0));
+      }
+
+      .purchase-title {
+        font-size: 2rem;
+        font-weight: bold;
+        background: linear-gradient(45deg, #9f6ff2, #9f6ff2);
+        background-size: 300% 300%;
+        animation: titleGlow 8s ease infinite;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+      }
+
+      @keyframes titleGlow {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .purchase-subtitle {
+        color: #ccc;
+        font-size: 1rem;
+        margin: 0;
+      }      .purchase-content {
+        flex: 1;
+        padding: 0 1.5rem 2rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-left: max(1.5rem, env(safe-area-inset-left, 0));
+        padding-right: max(1.5rem, env(safe-area-inset-right, 0));
+      }
+
+      .purchase-tabs {
+        display: flex;
+        background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+        border-radius: 12px;
+        padding: 0.25rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .tab-btn {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        background: none;
+        border: none;
+        color: #999;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .tab-btn.active {
+        background: linear-gradient(145deg, #444, #555);
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .plans-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .plan-card {
+        background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+        border: 1px solid #444;
+        border-radius: 16px;
+        padding: 1.5rem;
+        position: relative;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .plan-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+        border-color: #666;
+      }
+
+      .plan-card.popular {
+        border-color: #9f6ff2;
+        box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+      }
+
+      .plan-card.premium {
+        border-color: #9f6ff2;
+        box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+      }
+
+      .plan-badge {
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(45deg, #9f6ff2, #9f6ff2);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(255, 140, 0, 0.3);
+      }
+
+      .plan-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .plan-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+      }
+
+      .plan-price {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #9f6ff2;
+        margin-bottom: 0.25rem;
+      }
+
+      .plan-original {
+        font-size: 0.9rem;
+        color: #999;
+        text-decoration: line-through;
+      }
+
+      .plan-features {
+        margin-bottom: 1.5rem;
+      }
+
+      .feature {
+        color: #fff;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .plan-btn {
+        width: 100%;
+        padding: 0.75rem;
+        background: linear-gradient(145deg, #9f6ff2, #9f6ff2);
+        border: none;
+        color: #ffffff;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(255, 140, 0, 0.3);
+      }
+
+      .plan-btn:hover {
+        background: linear-gradient(145deg, #9f6ff2, #9f6ff2);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+      }
+
+      .purchase-screen::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .purchase-screen::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+        margin: 4px 0;
+      }
+
+      .purchase-screen::-webkit-scrollbar-thumb {
+        background: linear-gradient(145deg, #444, #555);
+        border-radius: 4px;
+        border: 1px solid #333;
+      }
+
+      .purchase-screen::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(145deg, #555, #666);
+      }      @media (max-width: 768px) {
+        .purchase-screen {
+          padding-top: env(safe-area-inset-top, 0);
+          padding-bottom: env(safe-area-inset-bottom, 0);
+          padding-left: env(safe-area-inset-left, 0);
+          padding-right: env(safe-area-inset-right, 0);
+        }
+
+        .plans-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .purchase-content {
+          padding: 0 1rem 2rem;
+          padding-left: max(1rem, env(safe-area-inset-left, 0));
+          padding-right: max(1rem, env(safe-area-inset-right, 0));
+        }
+
+        .purchase-header {
+          padding-left: max(1rem, env(safe-area-inset-left, 0));
+          padding-right: max(1rem, env(safe-area-inset-right, 0));
+        }
+
+        .purchase-toolbar {
+          padding-left: max(1rem, env(safe-area-inset-left, 0));
+          padding-right: max(1rem, env(safe-area-inset-right, 0));
+        }
+
+        .purchase-title {
+          font-size: 1.6rem;
+        }
+        .plan-price {
+          font-size: 1.8rem;
+        }
+        .plan-name {
+          font-size: 1.1rem;
+        }
+        .tab-btn {
+          font-size: 0.8rem;
+        }
+        .feature {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/027/119/138/large_2x/3d-rendering-vpn-isolated-useful-for-technology-programming-development-coding-software-app-computing-server-and-connection-design-element-png.png"
+          alt="vrconnect"
+          class="logo"
+        />
+      </div>
+      <div class="select-server" id="selectServer">
+        <i class="ph-light ph-flag"></i>
+        <input
+          type="text"
+          placeholder="Selecione TU operadora"
+          readonly
+          id="serverDisplay"
+        />
+        <i class="fas fa-chevron-down"></i>
+      </div>      <div class="input-field" id="usernameField">
+        <i class="ph-light ph-user"></i>
+        <input
+          type="text"
+          placeholder="ESCRIBE TU USUARIO"
+          id="usernameInput"
+          autocapitalize="off"
+        />
+      </div>      <div class="input-field" id="passwordField">
+        <i class="ph-light ph-key"></i>
+        <input
+          type="password"
+          placeholder="ESCRIBE TU CONTRASEÑA"
+          id="passwordInput"
+          autocapitalize="off"
+        />
+        <i class="ph-light ph-eye" id="togglePassword"></i>
+      </div>
+      <div class="input-field hidden" id="uuidField">
+        <i class="ph-light ph-identification-card"></i>
+        <input type="text" placeholder="Digite su UUID" id="uuidInput" />
+      </div>
+      <div class="connecting-animation" id="connectingAnimation">
+        <div class="spinner"></div>
+        <div class="connecting-text">Conectando y Verificando datos...</div>
+      </div>
+      <div class="user-info" id="user-info">
+        <div class="user-info-header">
+          <div class="user-avatar" id="user-avatar">U</div>
+          <div class="user-welcome">
+            <h3>Datos de su plan:</h3>
+            <p id="user-name">Cargando...</p>
+          </div>
+        </div>
+        <div class="user-stats">
+          <div class="stat-item">
+            <div class="stat-label">VENCE EN</div>
+            <div class="stat-value" id="days-remaining">-</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Vencimento</div>
+            <div class="stat-value" id="user-expiry">-</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Conectados</div>
+            <div class="stat-value" id="usage-limit">-</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Estado</div>
+            <div class="stat-value" style="color: #4caf50">Activo</div>
+          </div>
+        </div>
+      </div>
+      <div class="status"><i class="fas fa-circle"></i> Desconectado</div>
+      <div class="action-buttons">
+        <button class="action-btn" id="updateBtn">
+          <i class="ph-light ph-arrows-clockwise"></i> Actualizar
+        </button>
+        <button class="action-btn" id="debugBtn">
+          <i class="ph-light ph-scroll"></i> Logs
+        </button>
+        <button class="action-btn" id="menuBtn">
+          <i class="ph-light ph-list"></i><span>Menu</span>
+        </button>
+      </div>
+      <div class="error-message" id="errorMessage"></div>
+
+      <div class="main-connect-actions">
+        <button class="connect-btn" id="autoConnectBtn">CONECTAR</button>
+        <button class="auto-connect-btn" id="connectBtn">
+          <i class="ph-light ph-lightning"></i> AUTO
+        </button>
+      </div>###hola ✌🏻🇦🇷
+
+      <div class="network-info">
+        <div class="info-item">
+          <i class="fas fa-wifi icon glow-icon"></i
+          ><span
+            >Pais: <span class="info-value" id="networkName">Argentina😎🇦🇷</span></span
+          >
+        </div>
+        <div class="info-item">
+          <i class="fas fa-tachometer-alt icon glow-icon"></i
+          ><span
+            >Año: <span class="info-value" id="pingResult">2026</span></span
+          >
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt icon glow-icon"></i
+          ><span
+            >Local IP:
+            <span class="info-value" id="localIP">1.1.1.1</span></span
+          >
+        </div>
+        <div class="info-item">
+          <i class="fas fa-code-branch icon glow-icon"></i
+          ><span
+            >Vercion:
+            <span class="info-value" id="appVersion">10/1.1</span></span
+          >
+        </div>
+      </div>
+    </div>    <div class="menu-overlay" id="menuOverlay">
+      <div class="menu-container">
+        <div class="menu-header">
+          <div class="menu-header-title">MENU</div>
+          <button class="menu-close-btn" id="closeMenuBtn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>        <div class="menu-item purchase-highlight" id="menuPurchase">
+          <i class="fas fa-shopping-cart"></i>
+          <div class="menu-content">
+            <div class="menu-title">COMPRAR ACCESO</div>
+            <div class="menu-desc">ver lista de precios</div>
+          </div>
+        </div>
+        <div class="menu-item" id="menuSpeedtest">
+          <i class="ph-light ph-gauge"></i>
+          <div class="menu-content">
+            <div class="menu-title">SPEEDTEST</div>
+            <div class="menu-desc">Testear velocidad de conecion</div>
+          </div>
+        </div>
+        <div class="menu-item" id="menuApn">
+          <i class="ph-light ph-globe"></i>
+          <div class="menu-content">
+            <div class="menu-title">APN</div>
+            <div class="menu-desc">Abrir apn de redes</div>
+          </div>
+        </div>
+        <div class="menu-item" id="menuBattery">
+          <i class="ph-light ph-battery-charging"></i>
+          <div class="menu-content">
+            <div class="menu-title">BATERIA</div>
+            <div class="menu-desc">Optimizar uso de bateria</div>
+          </div>
+        </div>
+        <div class="menu-item" id="menuHotspot">
+          <i class="ph-light ph-share-network"></i>
+          <div class="menu-content">
+            <div class="menu-title">HOTSPOT</div>
+            <div class="menu-desc">Compartir conecion</div>
+          </div>          <div class="status-indicator" id="hotspotStatus"></div>
+        </div>
+        <div class="menu-item" id="menuClean">
+          <i class="ph-light ph-trash"></i>
+          <div class="menu-content">
+            <div class="menu-title">LIMPAR</div>
+            <div class="menu-desc">Limpar cache y datos de app</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <div class="modal-header">
+          <div class="modal-title">Selecionar Servidor</div>
+          <button class="close-btn" id="closeModal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Tela de Compra -->
+<div class="purchase-screen" id="purchaseScreen">
+  <div class="purchase-toolbar">
+    <button class="toolbar-btn" id="closePurchase">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="toolbar-title">Comprar Acceso</div>
+    <div class="toolbar-spacer"></div>
+  </div>
+
+  <div class="purchase-header">
+    <h1 class="purchase-title">Planos Disponibles</h1>
+    <p class="purchase-subtitle">
+      Selecione el plan que mejor se adapte a sus necesidades
+    </p>
+  </div>
+
+  <div class="purchase-content">
+    <div class="purchase-tabs">
+      <button class="tab-btn active" data-tab="days">1 dispositivo</button>
+      <button class="tab-btn" data-tab="months">2 dispositivos</button>
+    </div>
+
+    <!-- Planos para 1 dispositivo -->
+    <div class="tab-content active" id="daysTab">
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3 class="plan-name">7 dias</h3>
+            <div class="plan-price">AR$800</div>
+          </div>
+          <div class="plan-features">
+            <div class="feature">✓ Acesso completo</div>
+            <div class="feature">✓ Velocidad máxima</div>
+            <div class="feature">✓ Sim limite de datos</div>
+          </div>
+          <button class="plan-btn" onclick="window.open('https://t.me/onixsh', '_blank')">
+            Comprar
+          </button>
+        </div>
+
+        <div class="plan-card popular">
+          <div class="plan-badge">Mas Popular</div>
+          <div class="plan-header">
+            <h3 class="plan-name">30 dias</h3>
+            <div class="plan-price">AR$3700</div>
+            <div class="plan-original">AR$4000</div>
+          </div>
+          <div class="plan-features">
+            <div class="feature">✓ Acesso completo</div>
+            <div class="feature">✓ Velocidade máxima</div>
+            <div class="feature">✓ Sin limite de datos</div>
+            <div class="feature">✓ Soporte prioritário</div>
+          </div>
+          <button class="plan-btn" onclick="window.open('https://t.me/onixsh', '_blank')">
+            Comprar
+          </button>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3 class="plan-name">15 dias</h3>
+            <div class="plan-price">AR$1700</div>
+            <div class="plan-original">AR$2000</div>
+          </div>
+          <div class="plan-features">
+            <div class="feature">✓ Acesso completo</div>
+            <div class="feature">✓ Velocidade máxima</div>
+            <div class="feature">✓ Sim limite de datos</div>
+            <div class="feature">✓ Soporte prioritário</div>
+          </div>
+          <button class="plan-btn" onclick="window.open('https://t.me/onixsh', '_blank')">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Planos para 2 dispositivos -->
+    <div class="tab-content" id="monthsTab">
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3 class="plan-name">7 dias</h3>
+            <div class="plan-price">AR$1300</div>
+          </div>
+          <div class="plan-features">
+            <div class="feature">✓ Acesso completo</div>
+            <div class="feature">✓ Velocidade máxima</div>
+            <div class="feature">✓ Sin limite de datos</div>
+            <div class="feature">✓ Soporte prioritário</div>
+          </div>
+          <button class="plan-btn" onclick="window.open('https://t.me/onixsh', '_blank')">
+            Comprar
+          </button>
+        </div>
+
+        <div class="plan-card popular">
+          <div class="plan-badge">Mejor Valor</div>
+          <div class="plan-header">
+            <h3 class="plan-name">30 dias</h3>
+            <div class="plan-price">AR$7000</div>
+            <div class="plan-original">AR$8000</div>
+          </div>
+          <div class="plan-features">
+            <div class="feature">✓ Acesso completo</div>
+            <div class="feature">✓ Velocidade máxima</div>
+            <div class="feature">✓ Sin limite de datos</div>
+            <div class="feature">✓ Suporte prioritário</div>
+            <div class="feature">✓ Configuracion personalizada</div>
+          </div>
+          <button class="plan-btn" onclick="window.open('https://t.me/onixsh', '_blank')">
+            Comprar
+          </button>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3 class="plan-name">45 dias</h3>
+            <div class="plan-price">AR$5000</div>
+            <div class="plan-original">AR$6000</div>
+          </div>
+          <div class="plan-features">
+            <div class="feature">✓ Acesso completo</div>
+            <div class="feature">✓ Velocidad máxima</div>
+            <div class="feature">✓ Sin limite de datos</div>
+            <div class="feature">✓ Soporte prioritário</div>
+            <div class="feature">✓ Configuracion personalizada</div>
+            <div class="feature">✓ Acesso beta</div>
+          </div>
+          <button class="plan-btn" onclick="window.open('https://t.me/onixsh', '_blank')">
+            Comprar
+          </button>
+        </div>
+
+        <div class="plan-card premium">
+          <div class="plan-badge">Premium</div>
+          <div class="plan-header">
+            <h3 class="plan-name">60 dias</h3>
+            <div class="plan-price">AR$6000</div>
+            <div class="plan-original">AR$8000</div>
+          </div>
+          <div class="plan-features">
+            <div class="feature">✓ Acesso completo</div>
+            <div class="feature">✓ Velocidad máxima</div>
+            <div class="feature">✓ Sin limite de datos</div>
+            <div class="feature">✓ Soporte prioritário</div>
+            <div class="feature">✓ Configuraciom personalizada</div>
+            <div class="feature">✓ Acesso beta</div>
+            <div class="feature">✓ Soporte 24/7</div>
+          </div>
+          <button class="plan-btn" onclick="window.open('https://t.me/onixsh', '_blank')">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script>
+      const selectServerBtn = document.getElementById("selectServer");
+      const modalOverlay = document.getElementById("modalOverlay");
+      const closeModalBtn = document.getElementById("closeModal");
+      const modalBody = document.getElementById("modalBody");
+      const serverDisplay = document.getElementById("serverDisplay");
+      const usernameInput = document.getElementById("usernameInput");
+      const passwordInput = document.getElementById("passwordInput");
+      const uuidInput = document.getElementById("uuidInput");
+      const uuidField = document.getElementById("uuidField");
+      const usernameField = document.getElementById("usernameField");
+      const passwordField = document.getElementById("passwordField");
+      const togglePassword = document.getElementById("togglePassword");
+      const connectBtn = document.getElementById("connectBtn");
+      const updateBtn = document.getElementById("updateBtn");
+      const debugBtn = document.getElementById("debugBtn");
+      const autoConnectBtn = document.getElementById("autoConnectBtn");
+      const errorMessage = document.getElementById("errorMessage");
+      const connectingAnimation = document.getElementById(
+        "connectingAnimation"
+      );
+      const networkNameEl = document.getElementById("networkName");
+      const pingResultEl = document.getElementById("pingResult");
+      const localIPEl = document.getElementById("localIP");
+      const appVersionEl = document.getElementById("appVersion");
+      const userInfo = document.getElementById("user-info");
+
+      let currentConfig = null;
+      let allConfigs = [];
+      let vpnState = "DISCONNECTED";
+      let userCredentials = { username: "", password: "", uuid: "" };
+
+      const LS_PREFIX = "vrconnect_ui_";
+      let isAutoConnecting = false,
+        autoConnectTimeoutId = null,
+        autoConnectCheckIntervalId = null,
+        currentAutoConnectServerIndex = 0,
+        autoConnectServerList = [],
+        cleanupPoller = null;
+      let serverBeforeAutoConnect = null;
+      const AUTO_CONNECT_TIMEOUT_MS = 10000;
+
+      function dtShowSuccessToast(t) {
+        Toastify({
+          text: t,
+          duration: 3000,
+          close: !0,
+          gravity: "bottom",
+          position: "center",
+          style: {
+            background: "rgba(10, 20, 10, 0.5)",
+            color: "#e0f0e0",
+            borderRadius: "15px",
+            fontSize: "14px",
+            border: "1px solid rgba(76, 175, 80, 0.3)",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+            backdropFilter: "blur(10px)",
+            webkitBackdropFilter: "blur(10px)",
+          },
+        }).showToast();
+      }
+      function dtShowErrorToast(t) {
+        Toastify({
+          text: t,
+          duration: 3000,
+          close: !0,
+          gravity: "bottom",
+          position: "center",
+          style: {
+            background: "rgba(20, 10, 10, 0.5)",
+            color: "#f0e0e0",
+            borderRadius: "15px",
+            fontSize: "14px",
+            border: "1px solid rgba(244, 67, 54, 0.3)",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+            backdropFilter: "blur(10px)",
+            webkitBackdropFilter: "blur(10px)",
+          },
+        }).showToast();
+      }
+
+      setInterval(updateNetworkInfo, 5000);
+      setInterval(checkVpnState, 1000);
+
+      function updateVersionInfo() {
+        let configVersion = "-";
+        let appVersion = "-";
+        try {
+          if (window.DtGetLocalConfigVersion?.execute) {
+            const version = window.DtGetLocalConfigVersion.execute();
+            if (version) configVersion = version;
+          }
+        } catch (e) {}
+        try {
+          if (window.DtAppVersion?.execute) {
+            const version = window.DtAppVersion.execute();
+            if (version) appVersion = version;
+          }
+        } catch (e) {}
+        if (appVersionEl) {
+          appVersionEl.textContent = `${configVersion}/${appVersion}`;
+        }
+      }
+
+      function saveToLocalStorage(key, value) {
+        try {
+          localStorage.setItem(`tunnelx_${key}`, value);
+        } catch (e) {}
+      }
+      function loadFromLocalStorage(key) {
+        try {
+          return localStorage.getItem(`tunnelx_${key}`) || "";
+        } catch (e) {
+          return "";
+        }
+      }
+      function loadUserCredentials() {
+        userCredentials.username = loadFromLocalStorage("username");
+        userCredentials.password = loadFromLocalStorage("password");
+        userCredentials.uuid = loadFromLocalStorage("uuid");
+      }
+      function applyUserCredentialsToInputs() {
+        usernameInput.value = userCredentials.username;
+        passwordInput.value = userCredentials.password;
+        uuidInput.value = userCredentials.uuid;
+      }
+
+      function updateNetworkInfo() {
+        try {
+          networkNameEl.textContent =
+            window.DtGetNetworkName?.execute() || "Argentina🇦🇷😎";
+          localIPEl.textContent =
+            window.DtGetLocalIP?.execute() || "1.1.1.1";
+          pingResultEl.textContent =
+            window.DtGetPingResult?.execute() || "2026";
+        } catch (e) {}
+      }
+
+      function checkVpnState() {
+        try {
+          const state = window.DtGetVpnState?.execute();
+          if (state && state !== vpnState) {
+            vpnState = state;
+            updateUI();
+          }
+        } catch (e) {}
+      }
+
+      // CORREÇÃO: Função `updateUI` com lógica de habilitação de botões corrigida
+      function updateUI() {
+        const isConnecting = vpnState === "CONNECTING";
+        const isConnected = vpnState === "CONNECTED";
+        const isDisconnected = vpnState === "DISCONNECTED";
+
+        connectBtn.classList.remove("connecting", "connected");
+
+        if (isConnecting) {
+          connectBtn.classList.add("connecting");
+          connectBtn.textContent = "CANCELAR";
+          if (!isAutoConnecting) showConnectingAnimation(); // Só mostra animação se for manual
+        } else if (isConnected) {
+          connectBtn.classList.add("connected");
+          connectBtn.textContent = "DESCONECTAR";
+          hideConnectingAnimation();
+          showUserInfo();
+        } else {
+          connectBtn.textContent = "CONECTAR";
+          hideConnectingAnimation();
+          hideUserInfo();
+          showInputFields();
+        }
+
+        // A nova regra: O boton principal está sempre activo. O boton AUTO se a desativado
+        // se estiver conectado o se una conecion MANUAL estara em andamento.
+        connectBtn.disabled = false;
+        autoConnectBtn.disabled =
+          isConnected || (isConnecting && !isAutoConnecting);
+
+        const inputFields = document.querySelectorAll(".input-field");
+        inputFields.forEach((field) =>
+          field.classList.toggle("disabled", !isDisconnected)
+        );
+
+        const statusElement = document.querySelector(".status");
+        switch (vpnState) {
+          case "CONNECTED":
+            statusElement.style.color = "#4caf50";
+            statusElement.innerHTML = '<i class="fas fa-circle"></i> CONECTADO';
+            break;
+          case "CONNECTING":
+          case "STOPPING":
+            statusElement.style.color = "#FF8C00";
+            statusElement.innerHTML = `<i class="fas fa-circle"></i> ${
+              vpnState === "CONNECTING" ? "Conectando..." : "Desconectando..."
+            }`;
+            break;
+          case "AUTH_FAILED":
+            statusElement.style.color = "#f44336";
+            statusElement.innerHTML =
+              '<i class="fas fa-circle"></i> Falla en autenticacion';
+            break;
+          case "NO_NETWORK":
+            statusElement.style.color = "#f44336";
+            statusElement.innerHTML = '<i class="fas fa-circle"></i> Sin red';
+            break;
+          default:
+            statusElement.style.color = "#FF6347";
+            statusElement.innerHTML =
+              '<i class="fas fa-circle"></i> Desconectado';
+        }
+      }
+
+      function showError(message) {
+        dtShowErrorToast(message);
+      }
+
+      function validateConnection() {
+        if (!currentConfig) {
+          showError("Selecione un servidor antes de conectar");
+          return false;
+        }
+        const isV2ray = currentConfig.mode?.toLowerCase().includes("v2ray");
+        const hasAuthData =
+          currentConfig.auth &&
+          (currentConfig.auth.username ||
+            currentConfig.auth.password ||
+            currentConfig.auth.uuid);
+        if (hasAuthData) return true;
+        if (isV2ray) {
+          if (!uuidInput.value.trim()) {
+            showError("Digite o UUID para conecion V2Ray");
+            return false;
+          }
+        } else {
+          if (!usernameInput.value.trim() || !passwordInput.value.trim()) {
+            showError("Escribe el usuario y Contraseña para conectar");
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function appStartConnection() {
+        if (isAutoConnecting) {
+          showError("Conecion automática en progresso.");
+          return;
+        }
+        if (!validateConnection()) return;
+        try {
+          window.DtExecuteVpnStart?.execute();
+        } catch (e) {}
+      }
+
+      function appStopConnection() {
+        if (isAutoConnecting) {
+          stopAutoConnectProcess(false);
+          return;
+        }
+        try {
+          window.DtExecuteVpnStop?.execute();
+        } catch (e) {}
+      }
+
+      function saveSuccessfulConnection(serverId) {
+        if (!serverId) return;
+        const networkName = (
+          window.DtGetNetworkName?.execute() || ""
+        ).toLowerCase();
+        if (networkName.includes("wifi")) return;
+        let history = JSON.parse(
+          localStorage.getItem(LS_PREFIX + "successHistory") || "[]"
+        );
+        history = history.filter((id) => id !== serverId);
+        history.unshift(serverId);
+        localStorage.setItem(
+          LS_PREFIX + "successHistory",
+          JSON.stringify(history.slice(0, 5))
+        );
+      }
+
+      function stopAutoConnectProcess(successfullyConnected = false) {
+        if (successfullyConnected) {
+          const connectedServer =
+            autoConnectServerList[currentAutoConnectServerIndex];
+          if (connectedServer) saveSuccessfulConnection(connectedServer.id);
+        }
+        isAutoConnecting = false;
+        autoConnectBtn.classList.remove("auto-process");
+        autoConnectBtn.innerHTML = '<i class="fas fa-bolt"></i> AUTO';
+        if (autoConnectTimeoutId) clearTimeout(autoConnectTimeoutId);
+        if (autoConnectCheckIntervalId)
+          clearInterval(autoConnectCheckIntervalId);
+        if (cleanupPoller) clearInterval(cleanupPoller);
+
+        if (!successfullyConnected) {
+          const currentState =
+            window.DtGetVpnState?.execute() || "DISCONNECTED";
+          if (currentState !== "CONNECTED" && currentState !== "DISCONNECTED")
+            window.DtExecuteVpnStop?.execute();
+
+          if (serverBeforeAutoConnect) {
+            window.DtSetConfig?.execute(serverBeforeAutoConnect.id);
+          }
+          updateCurrentServerInfoDisplay();
+        }
+      }
+
+      function cleanupAndTryNext() {
+        if (cleanupPoller) clearInterval(cleanupPoller);
+        currentAutoConnectServerIndex++;
+        window.DtExecuteVpnStop?.execute();
+        cleanupPoller = setInterval(() => {
+          if (
+            (window.DtGetVpnState?.execute() || "DISCONNECTED") ===
+            "DISCONNECTED"
+          ) {
+            clearInterval(cleanupPoller);
+            cleanupPoller = null;
+            setTimeout(tryNextAutoConnectServer, 300);
+          }
+        }, 200);
+        setTimeout(() => {
+          if (cleanupPoller) {
+            clearInterval(cleanupPoller);
+            cleanupPoller = null;
+            tryNextAutoConnectServer();
+          }
+        }, 3000);
+      }
+
+      function verifyDataTraffic(onSuccess, onFailure) {
+        dtShowSuccessToast("Conexão estabelecida! Testando dados...");
+        const verificationTime = 8000;
+        const checkInterval = 1000;
+        let initialDownload =
+          parseFloat(window.DtGetNetworkDownloadBytes?.execute()) || 0;
+        let checks = 0;
+        const intervalId = setInterval(() => {
+          checks++;
+          const currentDownload =
+            parseFloat(window.DtGetNetworkDownloadBytes?.execute()) || 0;
+          if (currentDownload > initialDownload) {
+            clearInterval(intervalId);
+            onSuccess();
+          } else if (checks * checkInterval >= verificationTime) {
+            clearInterval(intervalId);
+            onFailure();
+          }
+        }, checkInterval);
+      }
+
+      function tryNextAutoConnectServer() {
+        if (!isAutoConnecting) return;
+        if (currentAutoConnectServerIndex >= autoConnectServerList.length) {
+          showError("Falla al conectar en todos los Servidores.");
+          stopAutoConnectProcess(false);
+          return;
+        }
+
+        if (autoConnectTimeoutId) clearTimeout(autoConnectTimeoutId);
+        if (autoConnectCheckIntervalId)
+          clearInterval(autoConnectCheckIntervalId);
+
+        const serverToTry =
+          autoConnectServerList[currentAutoConnectServerIndex];
+        const serverName = serverToTry.name || "Servidor";
+        dtShowSuccessToast(`Tentando: ${serverName}`);
+
+        serverDisplay.value = `Testando: ${serverName}`;
+
+        window.DtSetConfig?.execute(serverToTry.id);
+        setTimeout(() => {
+          window.DtExecuteVpnStart?.execute();
+        }, 100);
+
+        autoConnectTimeoutId = setTimeout(() => {
+          if (isAutoConnecting) cleanupAndTryNext();
+        }, AUTO_CONNECT_TIMEOUT_MS);
+        autoConnectCheckIntervalId = setInterval(() => {
+          if (!isAutoConnecting) {
+            clearInterval(autoConnectCheckIntervalId);
+            clearTimeout(autoConnectTimeoutId);
+            return;
+          }
+          const state = window.DtGetVpnState?.execute() || "DISCONNECTED";
+          if (state === "CONNECTED") {
+            clearInterval(autoConnectCheckIntervalId);
+            clearTimeout(autoConnectTimeoutId);
+            verifyDataTraffic(
+              () => {
+                dtShowSuccessToast(`Conectado y funcional en ${serverName}!`);
+                updateCurrentServerInfoDisplay();
+                stopAutoConnectProcess(true);
+              },
+              () => {
+                showError(`No genero datos. Próximo...`);
+                cleanupAndTryNext();
+              }
+            );
+          } else if (["AUTH_FAILED", "NO_NETWORK"].includes(state)) {
+            clearInterval(autoConnectCheckIntervalId);
+            clearTimeout(autoConnectTimeoutId);
+            cleanupAndTryNext();
+          }
+        }, 500);
+      }
+
+      function handleAutoConnectClick() {
+        if (isAutoConnecting) {
+          stopAutoConnectProcess(false);
+          showError("Conecion automática cancelada.");
+          return;
+        }
+
+        const currentState = window.DtGetVpnState?.execute() || "DISCONNECTED";
+        if (["CONNECTED", "CONNECTING", "AUTH"].includes(currentState)) {
+          showError("Ya conectado o conectando.");
+          return;
+        }
+        if (
+          !(usernameInput.value.trim() && passwordInput.value.trim()) &&
+          !uuidInput.value.trim()
+        ) {
+          showError("Escribe sus credenciales de acesso.");
+          return;
+        }
+
+        isAutoConnecting = true;
+        serverBeforeAutoConnect = getCurrentConfig();
+        autoConnectBtn.classList.add("auto-process");
+        autoConnectBtn.innerHTML = '<i class="fas fa-times"></i>';
+
+        let allServersRaw = [];
+        try {
+          const configsData = window.DtGetConfigs?.execute();
+          const categories = JSON.parse(configsData || "[]");
+          categories.forEach((cat) => {
+            if (cat.items) allServersRaw.push(...cat.items);
+          });
+        } catch (e) {
+          showError("Error al carregar servidores.");
+          stopAutoConnectProcess();
+          return;
+        }
+        if (allServersRaw.length === 0) {
+          showError("Ningun servidor encontrado para testar.");
+          stopAutoConnectProcess();
+          return;
+        }
+
+        const finalServerList = [];
+        const addedServerIds = new Set();
+        const addServer = (server) => {
+          if (server && !addedServerIds.has(server.id)) {
+            finalServerList.push(server);
+            addedServerIds.add(server.id);
+          }
+        };
+
+        if (currentConfig) addServer(currentConfig);
+        const successHistoryIds = JSON.parse(
+          localStorage.getItem(LS_PREFIX + "successHistory") || "[]"
+        );
+        successHistoryIds.forEach((id) =>
+          addServer(allServersRaw.find((s) => s.id === id))
+        );
+        const carrierName = (window.DtGetNetworkName?.execute() || "")
+          .toLowerCase()
+          .trim()
+          .split(" ")[0];
+        if (carrierName && !carrierName.includes("wifi")) {
+          allServersRaw.forEach((server) => {
+            if ((server.name || "").toLowerCase().includes(carrierName))
+              addServer(server);
+          });
+        }
+        allServersRaw.forEach(addServer);
+
+        autoConnectServerList = finalServerList;
+        if (autoConnectServerList.length === 0) {
+          showError("Ningun servidor compatible encontrado.");
+          stopAutoConnectProcess();
+          return;
+        }
+        currentAutoConnectServerIndex = 0;
+        tryNextAutoConnectServer();
+      }
+
+      autoConnectBtn.addEventListener("click", handleAutoConnectClick);
+
+      togglePassword.addEventListener("click", () => {
+        passwordInput.type =
+          passwordInput.type === "password" ? "text" : "password";
+        togglePassword.classList.toggle("fa-eye");
+        togglePassword.classList.toggle("fa-eye-slash");
+      });
+
+      updateBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        try {
+          window.DtStartAppUpdate?.execute();
+          dtShowSuccessToast("Procurando Atualizacion...");
+        } catch (e) {
+          showError("Erro ao iniciar atualização");
+        }
+      });
+      debugBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        try {
+          window.DtShowLoggerDialog?.execute();
+        } catch (e) {}
+      });
+      connectBtn.addEventListener("click", () => {
+        vpnState !== "DISCONNECTED"
+          ? appStopConnection()
+          : appStartConnection();
+      });
+      selectServerBtn.addEventListener("click", () => {
+        if (!isAutoConnecting) {
+          loadServers();
+          modalOverlay.style.display = "flex";
+        } else {
+          showError("Aguarde o fin de conecion automática.");
+        }
+      });
+      closeModalBtn.addEventListener(
+        "click",
+        () => (modalOverlay.style.display = "none")
+      );
+      modalOverlay.addEventListener("click", (e) => {
+        if (e.target === modalOverlay) modalOverlay.style.display = "none";
+      });
+
+      function loadServers() {
+        try {
+          const configsData = window.DtGetConfigs?.execute();
+          if (configsData) {
+            allConfigs = JSON.parse(configsData);
+            allConfigs.sort((a, b) => (a.sorter || 0) - (b.sorter || 0));
+            allConfigs.forEach((cat) =>
+              cat.items?.sort((a, b) => (a.sorter || 0) - (b.sorter || 0))
+            );
+            currentView = "categories";
+            selectedCategory = null;
+            renderServers();
+          }
+        } catch (e) {
+          modalBody.innerHTML =
+            '<div style="padding: 2rem; text-align: center; color: #ccc;">Error al cargar servidores</div>';
+        }
+      }
+
+      let currentView = "categories",
+        selectedCategory = null;
+      function renderServers() {
+        modalBody.innerHTML = "";
+        currentView === "categories"
+          ? renderCategories()
+          : renderCategoryServers();
+      }
+      function renderCategories() {
+        allConfigs.forEach((category) => {
+          if (!category.items || category.items.length === 0) return;
+          const categoryItem = document.createElement("div");
+          categoryItem.className = "category-item";
+          categoryItem.innerHTML = `<div class="category-item-content"><img src="${
+            category.items[0].icon || "https://placehold.co/42"
+          }" alt="${
+            category.name
+          }" class="category-icon" onerror="this.src='https://placehold.co/42'"><div class="category-info"><div class="category-name">${
+            category.name
+          }</div><div class="category-count">${category.items.length} servidor${
+            category.items.length > 1 ? "es" : ""
+          }</div></div></div><i class="fas fa-chevron-right" style="color: #ccc;"></i>`;
+          categoryItem.addEventListener("click", () => {
+            selectedCategory = category;
+            currentView = "servers";
+            renderServers();
+          });
+          modalBody.appendChild(categoryItem);
+        });
+      }
+      function renderCategoryServers() {
+        const backBtn = document.createElement("div");
+        backBtn.className = "back-btn";
+        backBtn.innerHTML = `<i class="fas fa-arrow-left"></i><span>Volver</span>`;
+        backBtn.addEventListener("click", () => {
+          currentView = "categories";
+          selectedCategory = null;
+          renderServers();
+        });
+        modalBody.appendChild(backBtn);
+        const categoryDiv = document.createElement("div");
+        categoryDiv.className = "category";
+        const categoryHeader = document.createElement("div");
+        categoryHeader.className = "category-header";
+        categoryHeader.textContent = selectedCategory.name;
+        categoryDiv.appendChild(categoryHeader);
+        selectedCategory.items.forEach((item) => {
+          const serverItem = document.createElement("div");
+          serverItem.className = "server-item";
+          if (currentConfig && currentConfig.id === item.id)
+            serverItem.classList.add("selected");
+          serverItem.innerHTML = `<img src="${
+            item.icon || "https://placehold.co/42"
+          }" alt="${
+            item.name
+          }" class="server-icon" onerror="this.src='https://placehold.co/42'"><div class="server-info"><div class="server-name">${
+            item.name
+          }</div><div class="server-details"><span class="server-mode">${
+            item.mode
+          }</span><span>${item.description || ""}</span></div></div>`;
+          serverItem.addEventListener("click", (event) =>
+            selectServer(item, event)
+          );
+          categoryDiv.appendChild(serverItem);
+        });
+        modalBody.appendChild(categoryDiv);
+      }
+
+      function selectServer(config) {
+        try {
+          window.DtSetConfig?.execute(config.id);
+          updateCurrentServerInfoDisplay();
+          updateInputFields(config);
+          const updatedConfig = getCurrentConfig();
+          if (updatedConfig && updatedConfig.auth) {
+            const { username, password, uuid } = updatedConfig.auth;
+            usernameInput.value = username || userCredentials.username;
+            window.DtUsername?.set(usernameInput.value);
+            passwordInput.value = password || userCredentials.password;
+            window.DtPassword?.set(passwordInput.value);
+            uuidInput.value = uuid || userCredentials.uuid;
+            window.DtUuid?.set(uuidInput.value);
+          } else {
+            applyUserCredentialsToInputs();
+            window.DtUsername?.set(userCredentials.username);
+            window.DtPassword?.set(userCredentials.password);
+            window.DtUuid?.set(userCredentials.uuid);
+          }
+          modalOverlay.style.display = "none";
+        } catch (e) {}
+      }
+
+      function updateInputFields(config) {
+        usernameField.classList.add("hidden");
+        passwordField.classList.add("hidden");
+        uuidField.classList.add("hidden");
+        const configToCheck = getCurrentConfig() || config;
+        const isV2ray = configToCheck.mode?.toLowerCase().includes("v2ray");
+        const hasAuthData =
+          configToCheck.auth &&
+          (configToCheck.auth.username ||
+            configToCheck.auth.password ||
+            configToCheck.auth.uuid);
+        if (!hasAuthData) {
+          isV2ray
+            ? uuidField.classList.remove("hidden")
+            : (usernameField.classList.remove("hidden"),
+              passwordField.classList.remove("hidden"));
+        }
+      }
+
+      function getCurrentConfig() {
+        try {
+          const d = window.DtGetDefaultConfig?.execute();
+          return d ? JSON.parse(d) : null;
+        } catch (e) {
+          return null;
+        }
+      }
+
+     
+
+      function updateCurrentServerInfoDisplay() {
+        const configData = getCurrentConfig();
+        if (configData) {
+          serverDisplay.value = configData.name;
+          currentConfig = configData;
+        } else {
+          serverDisplay.value = "";
+          currentConfig = null;
+        }
+      }
+
+      function showConnectingAnimation() {
+        hideInputFields();
+        connectingAnimation.style.display = "block";
+        userInfo.style.display = "none";
+      }
+      function hideConnectingAnimation() {
+        connectingAnimation.style.display = "none";
+      }
+      function hideInputFields() {
+        document.querySelectorAll(".input-field:not(.hidden)").forEach((f) => {
+          f.classList.add("fade-out");
+          setTimeout(() => (f.style.display = "none"), 300);
+        });
+      }
+      function showInputFields() {
+        [usernameField, passwordField, uuidField].forEach((f) => {
+          f.style.display = "flex";
+          f.classList.remove("fade-out");
+        });
+        if (currentConfig) updateInputFields(currentConfig);
+      }
+      function showUserInfo() {
+        document
+          .querySelectorAll(".input-field")
+          .forEach((f) => (f.style.display = "none"));
+        userInfo.style.display = "block";
+        userInfo.classList.add("fade-in");
+        loadUserData();
+        try {
+          if (window.DtGetUserInfo?.execute) {
+            const d = window.DtGetUserInfo.execute();
+            if (d) dtCheckUserModelListener(d);
+          }
+        } catch (e) {}
+      }
+      function hideUserInfo() {
+        userInfo.style.display = "none";
+        userInfo.classList.remove("fade-in");
+      }
+
+      function dtCheckUserModelListener(userDataJson) {
+        try {
+          const t = JSON.parse(userDataJson);
+          document.getElementById("user-name").textContent = t.username || "-";
+          document.getElementById("user-expiry").textContent =
+            t.expiration_date || "-";
+          document.getElementById("days-remaining").textContent =
+            t.expiration_days ? `${t.expiration_days} dias` : "-";
+          document.getElementById("usage-limit").textContent =
+            t.limit_connections
+              ? `${t.count_connections || 0}/${t.limit_connections}`
+              : "-";
+          if (t.username)
+            document.getElementById("user-avatar").textContent = t.username
+              .charAt(0)
+              .toUpperCase();
+          saveToLocalStorage(
+            "user_data",
+            JSON.stringify({
+              username: t.username,
+              expiration_date: t.expiration_date,
+              expiration_days: t.expiration_days,
+              limit_connections: t.limit_connections,
+              count_connections: t.count_connections,
+            })
+          );
+        } catch (e) {}
+      }
+
+      function loadUserData() {
+        try {
+          const savedUserData = loadFromLocalStorage("user_data");
+          if (savedUserData) {
+            const d = JSON.parse(savedUserData);
+            document.getElementById("user-name").textContent = d.username;
+            document.getElementById("user-expiry").textContent =
+              d.expiration_date;
+            document.getElementById("days-remaining").textContent =
+              d.expiration_days !== "-" ? `${d.expiration_days} dias` : "-";
+            document.getElementById("usage-limit").textContent =
+              d.limit_connections !== "-"
+                ? `${d.count_connections}/${d.limit_connections}`
+                : "-";
+            if (d.username)
+              document.getElementById("user-avatar").textContent = d.username
+                .charAt(0)
+                .toUpperCase();
+          }
+        } catch (e) {}
+      }
+
+      usernameInput.addEventListener("input", () => {
+        userCredentials.username = usernameInput.value;
+        saveToLocalStorage("username", usernameInput.value);
+        try {
+          window.DtUsername?.set(usernameInput.value);
+        } catch (e) {}
+      });
+      passwordInput.addEventListener("input", () => {
+        userCredentials.password = passwordInput.value;
+        saveToLocalStorage("password", passwordInput.value);
+        try {
+          window.DtPassword?.set(passwordInput.value);
+        } catch (e) {}
+      });
+      uuidInput.addEventListener("input", () => {
+        userCredentials.uuid = uuidInput.value;
+        saveToLocalStorage("uuid", uuidInput.value);
+        try {
+          window.DtUuid?.set(uuidInput.value);
+        } catch (e) {}
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        try {
+          loadUserCredentials();
+          loadUserData();
+          updateNetworkInfo();
+          updateVersionInfo();
+          updateCurrentServerInfoDisplay();
+
+          if (currentConfig) {
+            updateInputFields(currentConfig);
+            if (currentConfig.auth) {
+              const { username, password, uuid } = currentConfig.auth;
+              usernameInput.value = username || userCredentials.username;
+              passwordInput.value = password || userCredentials.password;
+              uuidInput.value = uuid || userCredentials.uuid;
+            } else {
+              applyUserCredentialsToInputs();
+            }
+          } else {
+            applyUserCredentialsToInputs();
+          }
+
+          checkVpnState();
+          updateUI();
+        } catch (e) {}
+      });
+
+      const menuBtn = document.getElementById("menuBtn");
+      const menuOverlay = document.getElementById("menuOverlay");
+      const hotspotStatus = document.getElementById("hotspotStatus");
+      menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        menuOverlay.style.display = "flex";
+        setTimeout(() => {
+          menuOverlay.classList.add("show");
+        }, 10);
+        updateHotspotStatus();
+      });      menuOverlay.addEventListener("click", (e) => {
+        if (e.target === menuOverlay) closeMenu();
+      });
+      
+      // Event listener para el botón de cerrar menú
+      document.getElementById("closeMenuBtn").addEventListener("click", () => {
+        closeMenu();
+      });
+      
+      function closeMenu() {
+        menuOverlay.classList.remove("show");
+        setTimeout(() => {
+          menuOverlay.style.display = "none";
+        }, 300);      }
+      document.getElementById("menuPurchase").addEventListener("click", () => {
+        showPurchaseScreen();
+        closeMenu();      });
+
+      document.getElementById("menuSpeedtest").addEventListener("click", () => {
+        try {
+          window.DtStartWebViewActivity?.execute("https://fast.com/");
+          closeMenu();
+        } catch (e) {
+          showError("Error al testear velocidad");
+        }
+      });
+      document.getElementById("menuApn").addEventListener("click", () => {
+        try {
+          window.DtStartApnActivity?.execute();
+          closeMenu();
+        } catch (e) {}
+      });
+      document.getElementById("menuBattery").addEventListener("click", () => {
+        try {
+          window.DtIgnoreBatteryOptimizations?.execute();
+          closeMenu();
+        } catch (e) {}
+      });
+      document.getElementById("menuHotspot").addEventListener("click", () => {
+        toggleHotspot();
+        closeMenu();
+      });
+      document.getElementById("menuClean").addEventListener("click", () => {
+        try {
+          window.DtCleanApp?.execute();
+          dtShowSuccessToast("Limpeza realizada con exito");
+          closeMenu();
+        } catch (e) {
+          showError("Error al limpar aplicativo");        }
+      });
+      function updateHotspotStatus() {
+        try {
+          hotspotStatus.classList.toggle(
+            "active",
+            (window.DtGetStatusHotSpotService?.execute() || "STOPPED") ===
+              "RUNNING"
+          );
+        } catch (e) {}
+      }
+      function toggleHotspot() {
+        try {
+          const s = window.DtGetStatusHotSpotService?.execute() || "STOPPED";
+          s === "RUNNING"
+            ? window.DtStopHotSpotService?.execute()
+            : window.DtStartHotSpotService?.execute();
+          setTimeout(updateHotspotStatus, 1000);
+        } catch (e) {
+          showError("Erro ao alterar hotspot");
+        }
+      }
+
+      // Funciones para la pantalla de precios
+      const purchaseScreen = document.getElementById('purchaseScreen');
+      const closePurchaseBtn = document.getElementById('closePurchase');
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      function showPurchaseScreen() {
+        purchaseScreen.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closePurchaseScreen() {
+        purchaseScreen.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      // Event listener para el botón de cerrar
+      closePurchaseBtn.addEventListener('click', closePurchaseScreen);
+
+      // Event listeners para las pestañas
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetTab = btn.getAttribute('data-tab');
+          
+          // Remover clase active de todas las pestañas
+          tabBtns.forEach(tab => tab.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          // Agregar clase active a la pestaña seleccionada
+          btn.classList.add('active');
+          
+          // Mostrar el contenido correspondiente
+          if (targetTab === 'days') {
+            document.getElementById('daysTab').classList.add('active');
+          } else if (targetTab === 'months') {
+            document.getElementById('monthsTab').classList.add('active');
+          }
+        });
+      });
+
+      // Cerrar pantalla de precios com tecla ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && purchaseScreen.style.display === 'flex') {
+          closePurchaseScreen();
+        }
+      });
+
+    </script>
+  </body>
+</html>
