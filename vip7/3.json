@@ -389,7 +389,7 @@
   },
   {
     "name": "APP_CDN_COUNT_ENABLED",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN"
   },
   {
