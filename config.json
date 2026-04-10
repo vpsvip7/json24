@@ -1,5 +1,5 @@
 {
-  "Version": "1.6",
+  "Version": "1.7",
   "ReleaseNotes": "NUEVA ACTUALIZACION🏁 Disponible",
   "UrlUpdate": "https://raw.githubusercontent.com/vpsvip7/json24/refs/heads/main/config.json",
   "Sms": "",
@@ -22,13 +22,13 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "Slowchave": "",
    "Nameserver": "",
    "Slowdns": "",
-   "URLCheckuser": "http://190.106.134.122:2052/checkUser",
+   "URLCheckuser": "http://190.106.134.122:443/checkUser",
    "TunnelType": "Proxy"
   },
  {
    "Name": "ip Ar🇦🇷  Cloudflare",
    "FLAG": "br",
-   "ServerIP": "emailmarketing.personal.com.ar",
+   "ServerIP": "::ffff:6812:16b7",
    "ServerPort": "80",
    "SSLPort": "",
    "ProxyIP": "",
@@ -40,13 +40,13 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "Slowchave": "",
    "Nameserver": "",
    "Slowdns": "",
-   "URLCheckuser": "http://190.106.134.122:2052/checkUser",
+   "URLCheckuser": "http://190.106.134.122:443/checkUser",
    "TunnelType": "Direct"
   },
  {
    "Name": "ip chile 🇨🇱 CloudFlare",
    "FLAG": "chile",
-   "ServerIP": "emailmarketing.personal.com.ar",
+   "ServerIP": "::ffff:6812:16b7",
    "ServerPort": "80",
    "SSLPort": "",
    "ProxyIP": "",
@@ -58,7 +58,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "Slowchave": "",
    "Nameserver": "",
    "Slowdns": "",
-   "URLCheckuser": "http://38.7.207.237:2052/checkUser",
+   "URLCheckuser": "http://38.7.207.237:443/checkUser",
    "TunnelType": "Direct"
   },
 {
@@ -77,7 +77,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "Slowchave": "",
    "Nameserver": "",
    "Slowdns": "",
-   "URLCheckuser": "http://38.7.207.237:2052/checkUser",
+   "URLCheckuser": "http://38.7.207.237:443/checkUser",
    "TunnelType": "Proxy"
   }
  ]
