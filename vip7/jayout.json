@@ -186,7 +186,7 @@
     "id": 3819,
     "label": "VER modo de conecion",
     "name": "APP_SHOW_CONNECTION_MODE",
-    "value": false,
+    "value": true,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
@@ -267,7 +267,7 @@
     "id": 14427,
     "label": "Activar info de conectado",
     "name": "APP_SUCCESS_TOAST_ENABLED",
-    "value": true,
+    "value": false,
     "type": "BOOLEAN",
     "status": "ACTIVE",
     "user_id": "R3X0FCAV-EKRY-ANWR-QVGN-J4NDQZYABT5U"
