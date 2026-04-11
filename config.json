@@ -1,5 +1,5 @@
 {
-  "Version": "1.7",
+  "Version": "1.8",
   "ReleaseNotes": "NUEVA ACTUALIZACION🏁 Disponible",
   "UrlUpdate": "https://raw.githubusercontent.com/vpsvip7/json24/refs/heads/main/config.json",
   "Sms": "",
@@ -28,7 +28,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
  {
    "Name": "ip Ar🇦🇷  Cloudflare",
    "FLAG": "br",
-   "ServerIP": "::ffff:6812:16b7",
+   "ServerIP": "::ffff:6812:16b7;104.18.22.183",
    "ServerPort": "80",
    "SSLPort": "",
    "ProxyIP": "",
@@ -46,7 +46,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
  {
    "Name": "ip chile 🇨🇱 CloudFlare",
    "FLAG": "chile",
-   "ServerIP": "::ffff:6812:16b7",
+   "ServerIP": "104.18.22.183",
    "ServerPort": "80",
    "SSLPort": "",
    "ProxyIP": "",
