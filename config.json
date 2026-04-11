@@ -1,5 +1,5 @@
 {
-  "Version": "1.8",
+  "Version": "1.9",
   "ReleaseNotes": "NUEVA ACTUALIZACION🏁 Disponible",
   "UrlUpdate": "https://raw.githubusercontent.com/vpsvip7/json24/refs/heads/main/config.json",
   "Sms": "",
@@ -26,13 +26,13 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
    "TunnelType": "Proxy"
   },
  {
-   "Name": "ip Ar🇦🇷  Cloudflare",
+   "Name": "ip Ar🇦🇷 ipv6 Cloudflare",
    "FLAG": "br",
-   "ServerIP": "::ffff:6812:16b7;104.18.22.183",
+   "ServerIP": "104.18.22.183",
    "ServerPort": "80",
    "SSLPort": "",
-   "ProxyIP": "",
-   "ProxyPort": "",
+   "ProxyIP": "::ffff:6812:16b7",
+   "ProxyPort": "80",
    "ServerUser": "",
    "ServerPass": "",
    "Payload": "GET //  HTTP/1.1[lf]Host: recargas.personal.com.ar[lf]Expect: 911-continue[crlf][crlf][split][crlf][crlf]GET- // HTTP/1.1[crlf]Host: 1.vps204.shop[crlf]Connection: Upgrade[crlf]-_-[crlf]Upgrade: websocket[crlf][crlf]",
