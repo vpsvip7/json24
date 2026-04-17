@@ -105,7 +105,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         },
         {
-            "Name":"Test🔥",
+            "Name":"Test1.1🔥",
             "Servidor":":7290;7291;7292;7293",
             "SPort":"",
             "Prox":"104.19.239.25:80",
@@ -124,4 +124,4 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         }
     ],
-    "ConfigVersion":1}
+    "ConfigVersion":1.1}
