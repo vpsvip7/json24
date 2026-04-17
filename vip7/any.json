@@ -124,4 +124,4 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         }
     ],
-    "ConfigVersion":1.1}
+    "ConfigVersion":2}
