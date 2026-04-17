@@ -39,7 +39,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "Certopen":"",
             "Dns1":"",
             "Dns2":"",
-            "Checkuser":"http://186.148.224.201:2052/anymod",
+            "Checkuser":"http://186.148.224.201:443/anymod",
             "VPNMod":0,
             "VPNTunMod":1,
             "Info":"sin saldo ni mb:argentina",
@@ -47,7 +47,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         },
         {
-            "Name":"FLARE Argentina 🇦🇷 INTERNO",
+            "Name":"FLARE Argentina 🇦🇷 ",
             "Servidor":":7290;7291;7292;7293",
             "SPort":"",
             "Prox":"104.18.22.183:80",
