@@ -1,0 +1,522 @@
+[
+  {
+    "label": "LBL_BTN_START",
+    "text": "\u003Cfont size=\"7px\" color=\"#00ff00\"\u003E\u003Cb\u003E🚀🚀CONECTAR🚀🚀\u003C/b\u003E\u003C/font\u003E"
+  },
+  {
+    "label": "LBL_BTN_STOPPING",
+    "text": "PARANDO"
+  },
+  {
+    "label": "LBL_BTN_STOP",
+    "text": "\u003Cfont size=\"7px\" color=\"#ff0000\"\u003E🚧PARAR🚧\u003C/font\u003E"
+  },
+  {
+    "label": "LBL_BTN_RECONNECT",
+    "text": "RECONECTAR"
+  },
+  {
+    "label": "LBL_DISCONNECTED",
+    "text": "\u003Cb\u003EDesconectado\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_RECORD",
+    "text": "REGISTRO"
+  },
+  {
+    "label": "LBL_CHOOSE_CONFIG",
+    "text": "\u003Cfont color=\"#0000ff\"\u003EESCOJA UNA CONFIGURACION\u003C/font\u003E"
+  },
+  {
+    "label": "LBL_UUID",
+    "text": "UUID V2Ray"
+  },
+  {
+    "label": "LBL_USERNAME",
+    "text": "\u003Cfont size=\"5px\" color=\"#00ff00\"\u003ENombre de usuário\u003C/font\u003E"
+  },
+  {
+    "label": "LBL_PASSWORD",
+    "text": "Contraseña"
+  },
+  {
+    "label": "LBL_UUID_INVALID",
+    "text": "UUID inválido"
+  },
+  {
+    "label": "LBL_USERNAME_INVALID",
+    "text": "Nombre de usuário inválido"
+  },
+  {
+    "label": "LBL_PASSWORD_INVALID",
+    "text": "Senha inválida"
+  },
+  {
+    "label": "LBL_USERNAME_PASSWORD_INVALID",
+    "text": "Por favor, Corrije tu  usuário o Contraseña"
+  },
+  {
+    "label": "LBL_CONFIG_TITLE",
+    "text": "Configuracion"
+  },
+  {
+    "label": "LBL_INITIALIZING_APP",
+    "text": "Inicializando aplicacion"
+  },
+  {
+    "label": "LBL_CONFIG_LOADED",
+    "text": "Configuracion carregada"
+  },
+  {
+    "label": "LBL_SEARCHING_FOR_UPDATES",
+    "text": "Procurando atualizacion"
+  },
+  {
+    "label": "LBL_CONFIG_UPDATED",
+    "text": "Configuracion actualizadas con sucesso"
+  },
+  {
+    "label": "LBL_APP_CONFIG_UPDATED",
+    "text": "Configuracion de app actualizadas con sucesso"
+  },
+  {
+    "label": "LBL_APP_TEXT_UPDATED",
+    "text": "Textos de app actualizados con sucesso"
+  },
+  {
+    "label": "LBL_CONFIG_NOT_SUPPORTED",
+    "text": "Parece que esta configuracion no es suportado por aplicativo"
+  },
+  {
+    "label": "LBL_ERROR_ESTABLISHING_CONNECTION_SSH",
+    "text": "\u003Cb\u003EErro ao estabelecer conexion SSH\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_RECONNECTION_PROCESS",
+    "text": "Processo de reconexão"
+  },
+  {
+    "label": "LBL_RECONNECTING_IN",
+    "text": "Reconectando em: jj"
+  },
+  {
+    "label": "LBL_RECONNECTING",
+    "text": "Reconectando..."
+  },
+  {
+    "label": "LBL_CONNECTING",
+    "text": "Conectando..."
+  },
+  {
+    "label": "LBL_STOPPING",
+    "text": "Parando..."
+  },
+  {
+    "label": "LBL_LOCAL_NETWORK_IP",
+    "text": "{NETWORK}: "
+  },
+  {
+    "label": "LBL_LOCAL_IP",
+    "text": "IP Local: "
+  },
+  {
+    "label": "LBL_LOCAL_IP_INFO",
+    "text": "IPv4 Local: weke"
+  },
+  {
+    "label": "LBL_DNS_SERVER_INFO",
+    "text": "Servidor DNS: no"
+  },
+  {
+    "label": "LBL_ROUTES_INFO_INCL",
+    "text": "Rotas: ssss"
+  },
+  {
+    "label": "LBL_ROUTES_INFO_EXCL",
+    "text": "Rotas excluídas: ssdd"
+  },
+  {
+    "label": "LBL_INVALID_CONFIG_OVPN",
+    "text": "Configuração OVPN inválida"
+  },
+  {
+    "label": "LBL_ERROR",
+    "text": "Erro: %s"
+  },
+  {
+    "label": "LBL_CONFIG_NOT_FOUND_TITLE",
+    "text": "Configuracion no encontrada"
+  },
+  {
+    "label": "LBL_CONFIG_NOT_FOUND_TEXT",
+    "text": "Ninguna configuracion encontrada"
+  },
+  {
+    "label": "LBL_STOP_APPLICATION",
+    "text": "Para continuar, para el aplicativo"
+  },
+  {
+    "label": "LBL_FINGERPRINT",
+    "text": "\u003Cb\u003EImpressão digital: uu\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_AUTHENTICATING",
+    "text": "Autenticando..."
+  },
+  {
+    "label": "LBL_AUTHENTICATION_SUCCESS",
+    "text": "\u003Cb\u003EAutenticacion realizada con sucesso\u003C/\u003E"
+  },
+  {
+    "label": "LBL_AUTHENTICATION_FAILED",
+    "text": "FALLA EN LA AUTENTICACION"
+  },
+  {
+    "label": "LBL_AUTHENTICATION_FAILED_TEXT",
+    "text": "No fue posible autenticar com servidor."
+  },
+  {
+    "label": "LBL_STATE_CONNECTED",
+    "text": "Conectado"
+  },
+  {
+    "label": "LBL_STATE_DISCONNECTED",
+    "text": "Desconectado"
+  },
+  {
+    "label": "LBL_STATE_CONNECTING",
+    "text": "Conectando"
+  },
+  {
+    "label": "LBL_STATE_STOPPING",
+    "text": "Parando"
+  },
+  {
+    "label": "LBL_STATE_NO_NETWORK",
+    "text": "Sin acesso a internet"
+  },
+  {
+    "label": "LBL_STATE_AUTH",
+    "text": "Autenticando"
+  },
+  {
+    "label": "LBL_STATE_AUTH_FAILED",
+    "text": "Falla en autenticacion"
+  },
+  {
+    "label": "LBL_STATE_UNKNOWN",
+    "text": "Desconhecido"
+  },
+  {
+    "label": "LBL_STATE_ASSIGN_IP",
+    "text": "Atribuindo IP"
+  },
+  {
+    "label": "LBL_STATE_ADD_ROUTES",
+    "text": "Adicionando rotas"
+  },
+  {
+    "label": "LBL_STATE_RECONNECTING",
+    "text": "Reconectando"
+  },
+  {
+    "label": "LBL_STATE_EXITING",
+    "text": "Saindo"
+  },
+  {
+    "label": "LBL_STATE_RESOLVE",
+    "text": "Resolvendo"
+  },
+  {
+    "label": "LBL_STATE_TCP_CONNECT",
+    "text": "Conectando (TCP)"
+  },
+  {
+    "label": "LBL_STATE_VPN_GENERATE_CONFIG",
+    "text": "Gerando configuração"
+  },
+  {
+    "label": "LBL_STATE_WAIT",
+    "text": "Aguardando"
+  },
+  {
+    "label": "LBL_STATE_GET_CONFIG",
+    "text": "Obtendo configuração"
+  },
+  {
+    "label": "LBL_VPN_ESTABLISHED",
+    "text": "\u003Cb\u003EVPN estabelecido\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_APP_VERSION",
+    "text": "\u003Cb\u003E%s %s %s\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_MOBILE_INFO",
+    "text": "\u003Cb\u003E%s | %s | %s | %s\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_ROUTE_REJECTED",
+    "text": "Rota rejeitada:"
+  },
+  {
+    "label": "LBL_COULD_NOT_ADD_DNS",
+    "text": "Não foi possível adicionar DNS:"
+  },
+  {
+    "label": "LBL_ERROR_INTERFACE_TUN",
+    "text": "Erro ao criar interface tun"
+  },
+  {
+    "label": "LBL_OPENING_INTERFACE_TUN",
+    "text": "Abrindo interface tun"
+  },
+  {
+    "label": "LBL_CHECKING_USER",
+    "text": "Verificando usuário..."
+  },
+  {
+    "label": "LBL_CHECKING_USER_FAILED",
+    "text": "Falla al verificar usuário"
+  },
+  {
+    "label": "LBL_OVPN_STARTED",
+    "text": "OpenVPN iniciado"
+  },
+  {
+    "label": "LBL_TLS_VERSION",
+    "text": "\u003Cb\u003EVersão do TLS: \u003C/b\u003E"
+  },
+  {
+    "label": "LBL_TLS_ALGORITHM",
+    "text": "\u003Cb\u003EAlgoritmo TLS: \u003C/b\u003E"
+  },
+  {
+    "label": "LBL_INVALID_IP",
+    "text": "IP inválido: "
+  },
+  {
+    "label": "LBL_CHECK_USER_TITLE",
+    "text": "INFO. DE USUÁRIO"
+  },
+  {
+    "label": "LBL_CHECK_USER_MESSAGE",
+    "text": "\u003Cfont size=\"5px\" color=\"#00ff00\"\u003E\u003Cb\u003E👤 User: {username}📆 Vence: {expiration_date}\u003Cbr\u003E📅 Dias restantes: {expiration_days}🚫 Conexion: {count_connections}|{limit_connections}\u003C/b\u003E\u003C/font\u003E"
+  },
+  {
+    "label": "LBL_NETWORK_STATUS",
+    "text": "Stado de red: "
+  },
+  {
+    "label": "LBL_WELCOME",
+    "text": "Bem-vindo(a)"
+  },
+  {
+    "label": "LBL_INFO",
+    "text": "Aviso"
+  },
+  {
+    "label": "LBL_ALERT",
+    "text": "Alerta"
+  },
+  {
+    "label": "LBL_SSH_LIB_NOT_FOUND",
+    "text": "SSH no encontrado"
+  },
+  {
+    "label": "LBL_V2RAY_NOT_FOUND",
+    "text": "V2Ray não encontrado"
+  },
+  {
+    "label": "LBL_OPENVPN_NOT_FOUND",
+    "text": "OpenVPN não encontrado"
+  },
+  {
+    "label": "LBL_APP_UPDATE_TITLE",
+    "text": "ACTUALIZACION DISPONIBLE"
+  },
+  {
+    "label": "LBL_APP_UPDATE_MESSAGE",
+    "text": "UNA NUEVA VERSION DE APLICATIVO ESTÁ DISPONIBLE."
+  },
+  {
+    "label": "LBL_APP_UPDATE_BUTTON",
+    "text": "ACTUALIZAR♻"
+  },
+  {
+    "label": "LBL_APP_UPDATE_INSTALL",
+    "text": "INSTALAR"
+  },
+  {
+    "label": "LBL_APP_UPDATE_DOWNLOADING",
+    "text": "BAJANDO ACTUALIZACION"
+  },
+  {
+    "label": "LBL_APP_UPDATE_DOWNLOAD_COMPLETED",
+    "text": "DOWNLOAD COMPLETO"
+  },
+  {
+    "label": "LBL_CONFIG_NOT_SELECTED",
+    "text": "Ninguna configuracion selecionada"
+  },
+  {
+    "label": "LBL_CONFIG_NOT_ACTIVE",
+    "text": "Parece que a configuracion selecionada no está activa"
+  },
+  {
+    "label": "LBL_CLEAR_APP_TITLE",
+    "text": "LIMPIAR APLICATIVO"
+  },
+  {
+    "label": "LBL_CLEAR_APP_MESSAGE",
+    "text": "Usted Esta Seguro de Querer LIMPIAR O APLICATIVO?"
+  },
+  {
+    "label": "LBL_VPN_PERMISSION_DENIED",
+    "text": "ERROR AL ESTABELECER CONEXION VPN"
+  },
+  {
+    "label": "LBL_VPN_PERMISSION_DENIED_TEXT",
+    "text": "Desculpe, no fue posible estabelecer a conexion VPN."
+  },
+  {
+    "label": "LBL_VPN_PERMISSION_DENIED_BTN",
+    "text": "ABRIR CONFIGURACION DE VPN"
+  },
+  {
+    "label": "LBL_YES",
+    "text": "Sim"
+  },
+  {
+    "label": "LBL_NO",
+    "text": "No"
+  },
+  {
+    "label": "LBL_CONFIG_IMPORT_TITLE",
+    "text": "IMPORTAR CONFIGURACION"
+  },
+  {
+    "label": "LBL_CONFIG_IMPORT_MESSAGE",
+    "text": "FUE ENCONTRADO UNA CONFIGURACION EN AREA DE TRANSFERÊNCIA. DESEJA IMPORTAR?"
+  },
+  {
+    "label": "LBL_CONFIG_IMPORT_BTN_IMPORT",
+    "text": "IMPORTAR"
+  },
+  {
+    "label": "LBL_LIMITER_TITLE",
+    "text": "LIMITER"
+  },
+  {
+    "label": "LBL_LIMITER_TEXT",
+    "text": "El número máximo de conexiones permitidas fue Exedido."
+  },
+  {
+    "label": "LBL_VALIDATING_ACCESS",
+    "text": "Validando seu acesso..."
+  },
+  {
+    "label": "LBL_DNS_FORWARDING_DISABLED",
+    "text": "\u003Cb\u003EEncaminhamento de DNS desabilitado\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_DNS_FORWARDING_ENABLED",
+    "text": "\u003Cb\u003EEncaminhamento de DNS habilitado\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_QUANTITY_PAYLOAD",
+    "text": "\u003Cb\u003EPAYLOADS: %s\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_QUANTITY_SNI",
+    "text": "\u003Cb\u003ESNI: %s\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_QUANTITY_PROXY",
+    "text": "\u003Cb\u003EPROXIES: %s\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_QUANTITY_SERVER",
+    "text": "\u003Cb\u003ESERVIDORES: %s\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_QUANTITY_PROCESS",
+    "text": "\u003Cb\u003EPROCESSOS: %s\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_PING_STARTED",
+    "text": "\u003Cb\u003EPING INICIADO\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_PING_MESSAGE",
+    "text": "\u003Ci\u003EPing: %sms\u003C/i\u003E"
+  },
+  {
+    "label": "LBL_PING_STOPPED",
+    "text": "\u003Cb\u003EPING PARADO\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_ASSISTANT_TITLE",
+    "text": "ATIVAR ASSISTENTE"
+  },
+  {
+    "label": "LBL_ASSISTANT_TEXT",
+    "text": "Para continuar, Usted precisa configurar o aplicativo como assistente"
+  },
+  {
+    "label": "LBL_ASSISTANT_BUTTON",
+    "text": "\u003Cb\u003EABRIR CONFIGURAÇÕES\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_FORCE_AIRPLANE_MODE_TOGGLE",
+    "text": "\u003Cb\u003ETentando ativar e desativar o modo avião...\u003C/b\u003E"
+  },
+  {
+    "label": "LBL_MENU_HOTSPOT_TITLE",
+    "text": "LIGAR/DESLIGAR HOTSPOT"
+  },
+  {
+    "label": "LBL_MENU_HOTSPOT_DESCRIPTION",
+    "text": "el hotspot de dispositivo será Activado o Desactivado."
+  },
+  {
+    "label": "LBL_MENU_AIRPLANE_TITLE",
+    "text": "ATIVAR/DESTIVAR MODO AVION"
+  },
+  {
+    "label": "LBL_MENU_AIRPLANE_DESCRIPTION",
+    "text": "Ao clicar nessa opção, o modo avião do dispositivo será ativado ou desativado."
+  },
+  {
+    "label": "LBL_MENU_APN_TITLE",
+    "text": "ABRIR CONFIGURACION DE APN"
+  },
+  {
+    "label": "LBL_MENU_APN_DESCRIPTION",
+    "text": "Al clicar en esa opcion, a configuracion de apn de dispositivo será abierta."
+  },
+  {
+    "label": "LBL_MENU_NETWORK_TITLE",
+    "text": "ABRIR CONFIGURACION DE RED"
+  },
+  {
+    "label": "LBL_MENU_NETWORK_DESCRIPTION",
+    "text": "La configuracion de red de dispositivo será abierta."
+  },
+  {
+    "label": "LBL_MENU_BATTERY_TITLE",
+    "text": "DESACTIVAR OPTIMIZACION DE BATERIA"
+  },
+  {
+    "label": "LBL_MENU_BATTERY_DESCRIPTION",
+    "text": "La otimizacion de bateria será desactivada"
+  },
+  {
+    "label": "LBL_MENU_CLEAN_APP_TITLE",
+    "text": "LIMPIAR DATOS DE APP"
+  },
+  {
+    "label": "LBL_MENU_CLEAN_APP_DESCRIPTION",
+    "text": "Todos los datos de La app seran borrados."
+  }
+]
