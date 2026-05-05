@@ -2,7 +2,7 @@
   {
     "id": 178843,
     "category_id": 165398,
-    "name": "FRONT CHILE 🇨🇱",
+    "name": "FRONT CHILE 1.1 🇨🇱",
     "description": "sin saldo ni mb",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -137,7 +137,7 @@
   {
     "id": 170510,
     "category_id": 196241,
-    "name": "FLARE ip CHILE 🇨🇱",
+    "name": "FLARE ip CHILE 1.1 🇨🇱",
     "description": "cargar saldo cada 2meses",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
