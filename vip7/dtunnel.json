@@ -137,16 +137,16 @@
   {
     "id": 170510,
     "category_id": 196241,
-    "name": "FLARE ip CHILE 1.1 🇨🇱",
+    "name": "FLARE ip demo 🇦🇷 1.1 ",
     "description": "cargar saldo cada 2meses",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 2,
-    "url_check_user": "https://c1.vps204.shop:2053",
+    "url_check_user": "https://demo.vps204.shop:2053",
     "icon": null,
     "tls_version": "TLSv1.2",
     "config_payload": {
-      "payload": "GET //  HTTP/1.1[lf]Host: recargas.personal.com.ar[lf]Expect: 911-continue[crlf][crlf][split][crlf][crlf]GET- // HTTP/1.1[crlf]Host: c1.vps204.shop[crlf]Connection: Upgrade[crlf]-_-[crlf]Upgrade: websocket[crlf][crlf]",
+      "payload": "GET //  HTTP/1.1[lf]Host: recargas.personal.com.ar[lf]Expect: 911-continue[crlf][crlf][split][crlf][crlf]GET- // HTTP/1.1[crlf]Host: demo.vps204.shop[crlf]Connection: Upgrade[crlf]-_-[crlf]Upgrade: websocket[crlf][crlf]",
       "sni": null
     },
     "config_openvpn": null,
