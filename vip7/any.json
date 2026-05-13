@@ -27,7 +27,7 @@
     "Hostpp":"nao",
     "Networks":[
 	    {
-            "Name":"FRONT git ip Argentina🇦🇷  🌟",
+            "Name":"FRONT13 mayo ip Argentina🇦🇷  🌟",
             "Servidor":":7300",
             "SPort":"",
             "Prox":"recargas.personal.com.ar:80",
@@ -66,7 +66,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         },
         {
-            "Name":"FRONT ip chile🇨🇱🔥",
+            "Name":"FRONT ip yñmayo 13 chile🇨🇱🔥",
             "Servidor":":7300",
             "SPort":"",
             "Prox":"recargas.personal.com.ar:80",
