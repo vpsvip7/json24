@@ -7,7 +7,7 @@
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 1,
-    "url_check_user": null,
+    "url_check_user": "https://1.vps204.shop:2053",
     "icon": "https://i.ibb.co/xq8Mz39H/ar.png",
     "tls_version": "TLSv1.2",
     "config_payload": {
@@ -47,12 +47,12 @@
   {
     "id": 912230,
     "category_id": 196241,
-    "name": "🇦🇷FLARE git5 IP AR",
+    "name": "🇦🇷FLARE git8 IP AR",
     "description": "cargar saldo cada 2meses",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 1,
-    "url_check_user": null,
+    "url_check_user": "https://1.vps204.shop:2053",
     "icon": "https://i.ibb.co/xq8Mz39H/ar.png",
     "tls_version": "TLSv1.2",
     "config_payload": {
@@ -142,7 +142,7 @@
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
     "sorter": 2,
-    "url_check_user": "http://38.7.207.237:2052",
+    "url_check_user": "https://c1.vps204.shop:2053",
     "icon": "https://i.ibb.co/Wv8r6Mhx/chile.png",
     "tls_version": "TLSv1.2",
     "config_payload": {
