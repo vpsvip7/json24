@@ -92,7 +92,7 @@
   {
     "id": 866396,
     "category_id": 165398,
-    "name": "🇨🇱FRONT ip España",
+    "name": "🇨🇱FLARe ip España",
     "description": "ip españa",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -101,7 +101,8 @@
     "icon": "https://i.ibb.co/Wv8r6Mhx/chile.png",
     "tls_version": "TLSv1.2",
     "config_payload": {
-      "payload": "GET / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf][split]\nOPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[crlf]Host: connect3.vps204.shop[crlf]Backend: vip237 [crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]",
+      "payload": "COPY / HTTP/1.3[crlf]Host: recargas.personal.com.ar[crlf][crlf][split]
+OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[crlf]Host: connect2.vps204.shop[crlf]Backend: vip232 [crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]",
       "sni": null
     },
     "config_openvpn": null,
