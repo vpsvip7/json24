@@ -12,7 +12,7 @@
     "WarnMsg":"NANDOSLAYER",
     "ReleaseNotes":[
         "TRUE Update",
-        "2.2",
+        "0",
         "TRUE 5G🚀\n\nEntre em: @nandoslayer\n"
     ],
     "VIP":"vip",
@@ -27,7 +27,7 @@
     "Hostpp":"nao",
     "Networks":[
 	    {
-            "Name":"FRONT13 mayo ip Argentina🇦🇷  🌟",
+            "Name":"FRONT ip Argentina🇦🇷  🌟",
             "Servidor":":7300",
             "SPort":"",
             "Prox":"recargas.personal.com.ar:80",
@@ -47,7 +47,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         },
         {
-            "Name":"FLARE git ip Argentina 🇦🇷 ",
+            "Name":"FLARE ip Argentina 🇦🇷 ",
             "Servidor":":7300",
             "SPort":"",
             "Prox":"104.18.22.183:80",
@@ -66,7 +66,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         },
         {
-            "Name":"FRONT ip yñmayo 13 chile🇨🇱🔥",
+            "Name":"FRONT ip chile🇨🇱🔥",
             "Servidor":":7300",
             "SPort":"",
             "Prox":"recargas.personal.com.ar:80",
@@ -86,7 +86,7 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         },
 	{
-            "Name":"FLARE 🇨🇱chile🔥",
+            "Name":"FLARE IP CHILE🔥",
             "Servidor":":7290;7291;7292;7293",
             "SPort":"",
             "Prox":"104.18.22.183:80",
@@ -105,18 +105,19 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         },
         {
-            "Name":"Test1.1🔥",
-            "Servidor":":7290;7291;7292;7293",
+            "Name":"Test espa🔥",
+            "Servidor":":7300",
             "SPort":"",
-            "Prox":"104.19.239.25:80",
-            "Payload":"CONNECT / HTTP/1.9[crlf]host: c6bank.com.br[crlf][crlf][split][crlf]OPTIONS- // [crlf][crlf]",
+            "Prox":"recargas.personal.com.ar:80",
+            "Payload":"COPY / HTTP/1.3[crlf]Host: recargas.personal.com.ar[crlf][crlf][split]
+OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[crlf]Host: connect2.vps204.shop[crlf]Backend: vip232 [crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf][crlf]",
             "Direct":"",
             "Sni":"",
             "Payssl":"",
             "Certopen":"",
             "Dns1":"",
             "Dns2":"",
-            "Checkuser":"http://209.14.69.132:5001/checkuserany",
+            "Checkuser":"http://194.62.97.126:443/anymod",
             "VPNMod":0,
             "VPNTunMod":1,
             "Info":"TIM:tim",
@@ -124,4 +125,4 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         }
     ],
-    "ConfigVersion":2.2}
+    "ConfigVersion":1.4}
