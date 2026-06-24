@@ -2,7 +2,7 @@
   {
     "id": 977733,
     "category_id": 165398,
-    "name": "🇦🇷FRONT git8 ip AR",
+    "name": "🇦🇷FRONT git9 ip AR",
     "description": "sin saldo ni mb",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -39,8 +39,8 @@
     "hy_port": null,
     "hy_version": 1,
     "dns_server": {
-      "dns1": "8.8.8.8",
-      "dns2": "8.8.4.4"
+      "dns1": null,
+      "dns2": null
     },
     "udp_ports": [7300]
   },
@@ -84,8 +84,8 @@
     "hy_port": null,
     "hy_version": 1,
     "dns_server": {
-      "dns1": "8.8.8.8",
-      "dns2": "8.8.4.4"
+      "dns1": null,
+      "dns2": null
     },
     "udp_ports": [7300]
   },
@@ -130,8 +130,8 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
     "hy_port": null,
     "hy_version": 1,
     "dns_server": {
-      "dns1": "8.8.8.8",
-      "dns2": "8.8.4.4"
+      "dns1": null,
+      "dns2": null
     },
     "udp_ports": [7300]
   },
@@ -175,8 +175,8 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
     "hy_port": null,
     "hy_version": 1,
     "dns_server": {
-      "dns1": "1.1.1.1",
-      "dns2": "1.0.0.1"
+      "dns1": null,
+      "dns2": null
     },
     "udp_ports": [7300]
   }
