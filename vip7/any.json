@@ -12,7 +12,7 @@
     "WarnMsg":"NANDOSLAYER",
     "ReleaseNotes":[
         "TRUE Update",
-        "0",
+        "3",
         "TRUE 5G🚀\n\nEntre em: @nandoslayer\n"
     ],
     "VIP":"vip",
@@ -27,7 +27,7 @@
     "Hostpp":"nao",
     "Networks":[
 	    {
-            "Name":"FRONT ip Argentina🇦🇷  🌟",
+            "Name":"FRONT gity ip Argentina🇦🇷  🌟",
             "Servidor":":7300",
             "SPort":"",
             "Prox":"recargas.personal.com.ar:80",
@@ -125,4 +125,4 @@ OPTION / HTTP/1.1[crlf]Host: recargas.personal.com.ar[crlf][crlf]GET / HTTP/1.1[
             "CustomSquid":""
         }
     ],
-    "ConfigVersion":1.4}
+    "ConfigVersion":1.8}
