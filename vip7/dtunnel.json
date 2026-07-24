@@ -2,7 +2,7 @@
   {
     "id": 178843,
     "category_id": 165398,
-    "name": "FRONT CHILE 1.4 🇨🇱",
+    "name": "FRONT CHILE 1.5 🇨🇱",
     "description": "sin saldo ni mb",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -47,7 +47,7 @@
   {
     "id": 977733,
     "category_id": 165398,
-    "name": "🇦🇷FRONT ip AR 1.4",
+    "name": "🇦🇷FRONT ip AR 1.5",
     "description": "sin saldo ni mb",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -92,7 +92,7 @@
   {
     "id": 912230,
     "category_id": 196241,
-    "name": "🇦🇷FLARE IP AR",
+    "name": "🇦🇷FLARE IP AR ",
     "description": "cargar saldo cada 2meses",
     "mode": "SSH_PROXY",
     "status": "ACTIVE",
