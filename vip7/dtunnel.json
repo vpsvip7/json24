@@ -137,7 +137,7 @@
   {
     "id": 170510,
     "category_id": 196241,
-    "name": "FLARE ip Chile 🇨🇱 1.4 ",
+    "name": "FLARE ip Chile 🇨🇱 1.5 ",
     "description": "cargar saldo cada 2meses",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -174,8 +174,8 @@
     "hy_port": null,
     "hy_version": 1,
     "dns_server": {
-      "dns1": "8.8.8.8",
-      "dns2": "8.4.4.8"
+      "dns1": null,
+      "dns2": null
     },
     "udp_ports": [7300]
   }
