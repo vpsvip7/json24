@@ -49,7 +49,7 @@
   },
   {
     "label": "LBL_PASSWORD_INVALID",
-    "text": "Senha inválida"
+    "text": "Contraseña inválida"
   },
   {
     "label": "LBL_USERNAME_PASSWORD_INVALID",
@@ -69,11 +69,11 @@
   },
   {
     "label": "LBL_SEARCHING_FOR_UPDATES",
-    "text": "Procurando atualizacion"
+    "text": "Procurando atualizacion ..."
   },
   {
     "label": "LBL_CONFIG_UPDATED",
-    "text": "Configuracion actualizadas con sucesso"
+    "text": "Configuracion actualizadas con exitooo"
   },
   {
     "label": "LBL_APP_CONFIG_UPDATED",
