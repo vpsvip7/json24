@@ -1,14 +1,14 @@
 [
   {
     "id": 165398,
-    "name": "FRONT",
+    "name": "CONEXION FRONT",
     "color": "#1E90FFFF",
     "sorter": 1,
     "status": "ACTIVE"
   },
   {
     "id": 196241,
-    "name": "FLARE",
+    "name": "CONEXION FLARE",
     "color": "#1E90FFFF",
     "sorter": 1,
     "status": "ACTIVE"
