@@ -2,7 +2,7 @@
   {
     "id": 178843,
     "category_id": 165398,
-    "name": "FRONT CHILE 1.5 🇨🇱",
+    "name": "FRONT CHILE 1.6 🇨🇱",
     "description": "sin saldo ni mb",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -47,7 +47,7 @@
   {
     "id": 977733,
     "category_id": 165398,
-    "name": "🇦🇷FRONT ip AR 1.5",
+    "name": "🇦🇷FRONT ip AR 1.6",
     "description": "sin saldo ni mb",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -84,8 +84,8 @@
     "hy_port": null,
     "hy_version": 1,
     "dns_server": {
-      "dns1": "8.8.8.8",
-      "dns2": "8.8.4.4"
+      "dns1": null,
+      "dns2": null
     },
     "udp_ports": [7300]
   },
@@ -137,7 +137,7 @@
   {
     "id": 170510,
     "category_id": 196241,
-    "name": "FLARE ip Chile 🇨🇱 1.5 ",
+    "name": "FLARE ip Chile 🇨🇱 1.6 ",
     "description": "cargar saldo cada 2meses",
     "mode": "SSH_DIRECT",
     "status": "ACTIVE",
@@ -168,8 +168,8 @@
     "dnstt_server": null,
     "dnstt_name_server": null,
     "hy_obfs": null,
-    "hy_up_mbps": 100,
-    "hy_down_mbps": 150,
+    "hy_up_mbps": 10,
+    "hy_down_mbps": 10,
     "hy_insecure": true,
     "hy_port": null,
     "hy_version": 1,
